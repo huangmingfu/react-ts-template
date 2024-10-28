@@ -55,9 +55,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-          manualChunks: {
-            vendor: ['antd']
-          }
+          // manualChunks: {
+          //   vendor: ['antd']
+          // }
         }
       }
     }
