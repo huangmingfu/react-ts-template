@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build:dev": "tsc -b && pnpm vite build --mode dev",
+    "build:test": "tsc -b && pnpm vite build --mode test",
+    "build:pro": "tsc -b && pnpm vite build --mode pro",
+    "preview:dev": "pnpm vite preview --mode dev",
+    "preview:test": "pnpm vite preview --mode test",
+    "preview:pro": "pnpm vite preview --mode pro",
     "lint": "eslint .",
-    "preview": "vite preview",
     "preinstall": "npx only-allow pnpm",
     "push": "git add . && git commit -m \"feat: update\" && git push -u origin master"
   },
