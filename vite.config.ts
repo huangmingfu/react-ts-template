@@ -13,14 +13,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         '@': path.resolve(__dirname, 'src')
       }
     },
-    // css: {
-    //   preprocessorOptions: {
-    //     scss: {
-    //       javascriptEnabled: true,
-    //       additionalData: `@use "@/styles/global.scss" as *;` // 引入全局scss变量、方法等
-    //     }
-    //   }
-    // },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          javascriptEnabled: true,
+          additionalData: `@use "@/styles/global.scss" as *;` // 引入全局scss变量、方法等
+        }
+      }
+    },
     // 反向代理解决跨域问题
     server: {
       // open: true,// 运行时自动打开浏览器
