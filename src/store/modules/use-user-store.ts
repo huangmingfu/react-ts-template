@@ -1,4 +1,4 @@
-// 引入zustand库和Immer中间件
+// zustand库和Immer中间件：使用示例参考（此store可以随便删除）
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 

@@ -10,19 +10,18 @@ const router: RouteObject[] = [
     path: '/home',
     element: LazyLoad(lazy(() => import('@/views/home')))
   },
+  ...routes, // modules 路由
+  {
+    path: '/',
+    element: <Navigate to="/home" /> // 重定向
+  },
   {
     path: '/404',
     element: LazyLoad(lazy(() => import('@/components/not-fount')))
   },
-  ...routes,
-  // 重定向
-  {
-    path: '/',
-    element: <Navigate to="/home" />
-  },
   {
     path: '*',
-    element: <Navigate to="/404" />
+    element: <Navigate to="/404" /> // 找不到页面
   }
 ];
 
