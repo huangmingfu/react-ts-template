@@ -4,10 +4,9 @@ export default {
   // 继承某些已有的规则
   extends: [
     'stylelint-config-standard', // 配置 stylelint 拓展插件
-    'stylelint-config-standard-scss', // 配置 stylelint scss 插件
-    'stylelint-config-recommended-vue/scss', // 配置 vue 中 scss 样式格式化
-    'stylelint-config-recess-order' // 配置 stylelint css 属性书写顺序插件
+    'stylelint-config-standard-scss' // 配置 stylelint scss 插件
   ],
+  plugins: ['stylelint-order'],
   rules: {
     'no-descending-specificity': null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
     'no-empty-source': null, // 关闭禁止空源码
@@ -171,5 +170,14 @@ export default {
       'speak'
     ]
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json', '**/*.md', '**/*.yaml']
+  ignoreFiles: [
+    '**/*.js',
+    '**/*.jsx',
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.json',
+    '**/*.md',
+    '**/*.yaml',
+    '**/*.cjs'
+  ]
 };
