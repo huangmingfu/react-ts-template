@@ -11,14 +11,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@': path.resolve(fileURLToPath(new URL(".", import.meta.url)), 'src')
+        '@': path.resolve(fileURLToPath(new URL('.', import.meta.url)), 'src')
       }
     },
     css: {
       preprocessorOptions: {
         scss: {
           javascriptEnabled: true,
-          additionalData: `@use "@/styles/scss/var.scss" as *;`, // 引入全局scss变量
+          additionalData: `@use "@/styles/scss/var.scss" as *;` // 引入全局scss变量
         }
       }
     },
@@ -39,15 +39,15 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       env.VITE_NODE_ENV === 'develop'
         ? undefined
         : {
-          /** 打包时移除 console.log */
-          pure: ['console.log'],
-          /** 打包时移除 debugger */
-          drop: ['debugger'],
-          /** 打包时移除所有注释 */
-          legalComments: 'none'
-        },
+            /** 打包时移除 console.log */
+            pure: ['console.log'],
+            /** 打包时移除 debugger */
+            drop: ['debugger'],
+            /** 打包时移除所有注释 */
+            legalComments: 'none'
+          },
     build: {
-      target: 'esnext',// target: 'es2015',
+      target: 'esnext', // target: 'es2015',
       outDir: env.VITE_OUT_DIR || 'dist',
       minify: 'esbuild',
       chunkSizeWarningLimit: 1500,

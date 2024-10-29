@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 
-export * from './lazy-load'
+export * from './lazy-load';
 
 /**
  * 基于 src/router/routes/modules 文件结构动态生成路由
