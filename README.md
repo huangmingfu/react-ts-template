@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# React-Ts-Template
+> 一套基于react18、ts、vite5的项目模板,帮助快速搭建react项目
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 技术栈（以下都是最新版2024-10-29）
+- 1. react相关库（react18、react-dom、react-router-dom）
+- 2. scss 预编译（已使用最新版，@import 弃用，改用 @use）
+- 3. ahooks 类似vueuse
+- 4. zustand 状态管理（已对比react-redux、dva、react-toolkit、mobx）
+- 5. immer 弥补了 Javascript 没有不可变数据结构的问题
+- 6. lodash-es 工具库（更现代api实现的话可以采用es-toolkit）
+- 7. axios 请求库
+- 8. classnames 方便管理动态类名
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 项目规范
+- 1. 全面 ESM 规范
+- 2. 包管理器：已强制使用 `pnpm`
+- 3. 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
+- （eslint已使用最新版：.eslintignore弃用，改用 ignores 配置项）

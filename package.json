@@ -1,5 +1,6 @@
 {
   "name": "react-ts-template",
+  "description": "一套基于react18、ts、vite5的项目模板,帮助快速搭建react项目",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -15,6 +16,7 @@
     "lint:format": "prettier --write \"./**/*.{html,ts,tsx,js,jsx,json}\"",
     "lint:style": "stylelint \"./**/*.{css,scss}\" --fix",
     "lint:all": "pnpm run lint:eslint && pnpm run lint:style && pnpm run lint:format",
+    "lint:lint-staged": "lint-staged",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "push": "git add . && git commit -m \"feat: update\" && git push -u origin master",
