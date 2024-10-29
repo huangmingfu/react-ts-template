@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "push": "git add . && git commit -m \"feat: update\" && git push -u origin master",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules dist dist-*"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,cjs,mjs}": "eslint --fix",
