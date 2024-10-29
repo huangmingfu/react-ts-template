@@ -22,5 +22,8 @@
       "other": "off"
     },
     "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
