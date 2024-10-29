@@ -1,10 +1,10 @@
-import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
+import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
 // 创建axios实例
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API, // 请求的默认前缀 只要是发出去请求就会 默认带上这个前缀
   timeout: 10000 // 请求超时时间：10s
-})
+});
 
 // 请求拦截器
 axiosInstance.interceptors.request.use(
@@ -14,22 +14,22 @@ axiosInstance.interceptors.request.use(
     // if (token) {
     //     config.headers.Authorization = `Bearer ${token}`
     // }
-    return res
+    return res;
   },
   (err: AxiosError) => {
-    return Promise.reject(err)
+    return Promise.reject(err);
   }
-)
+);
 
 // 响应拦截器即异常处理
 axiosInstance.interceptors.response.use(
   (res: AxiosResponse) => {
-    return res //res.data
+    return res; //res.data
   },
   (err: AxiosError) => {
-    return Promise.resolve(err)
+    return Promise.resolve(err);
   }
-)
+);
 
 // 导出实例
-export default axiosInstance
+export default axiosInstance;
