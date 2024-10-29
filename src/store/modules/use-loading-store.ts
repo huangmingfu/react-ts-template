@@ -6,8 +6,8 @@ interface State {
 }
 
 type Action = {
-  showLoading: (loading: boolean) => void;
-  hideLoading: (loading: boolean) => void;
+  showLoading: Fn;
+  hideLoading: Fn;
 };
 
 export const useLoadingStore = create<State & Action>((set) => ({

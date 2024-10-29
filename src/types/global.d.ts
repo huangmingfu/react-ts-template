@@ -3,3 +3,5 @@ declare interface IResponse<T = unknown> {
   message: string;
   data: T;
 }
+
+declare type Fn = () => void;
