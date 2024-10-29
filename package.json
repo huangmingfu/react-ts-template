@@ -16,15 +16,18 @@
     "lint:style": "stylelint \"./**/*.{css,scss}\" --fix",
     "lint:all": "pnpm run lint && pnpm run lint:style && pnpm run lint:format",
     "preinstall": "npx only-allow pnpm",
-    "push": "git add . && git commit -m \"feat: update\" && git push -u origin master"
+    "push": "git add . && git commit -m \"feat: update\" && git push -u origin master",
+    "clean": "rm -rf node_modules"
   },
   "dependencies": {
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
+    "immer": "^10.1.1",
     "lodash-es": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

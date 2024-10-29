@@ -18,7 +18,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       preprocessorOptions: {
         scss: {
           javascriptEnabled: true,
-          additionalData: `@use "@/styles/global.scss" as *;` // 引入全局scss变量、方法等
+          additionalData: `@use "@/styles/scss/var.scss" as *;`, // 引入全局scss变量
         }
       }
     },

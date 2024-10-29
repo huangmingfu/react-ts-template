@@ -1,10 +1,18 @@
+// @use '@/styles/scss/tools' as *;
+
 .pg-guild-create {
   width: 155px;
-  font-size: 23px;
+  font-size: 17px;
   box-sizing: border-box;
 
   &__count {
     font-weight: bold;
     color: $color-test;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
   }
 }
