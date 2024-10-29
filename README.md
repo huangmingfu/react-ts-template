@@ -1,5 +1,6 @@
 # React-Ts-Template
-> 一套基于react18、ts、vite5的项目模板,帮助快速搭建react项目
+> 一套基于react18、ts、vite5的项目模板,帮助快速搭建react项目。
+> 集成了一些项目规范，封装了axios、router等，配置了环境变量、全局变量等。
 
 ## 技术栈（以下都是最新版2024-10-29）
 - 1. react相关库（react18、react-dom、react-router-dom）
@@ -14,5 +15,6 @@
 ## 项目规范
 - 1. 全面 ESM 规范
 - 2. 包管理器：已强制使用 `pnpm`
-- 3. 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
+- 3. 样式：采用 BEM 类名规范
+- 4. 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
 - （eslint已使用最新版：.eslintignore弃用，改用 ignores 配置项）
