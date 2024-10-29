@@ -8,16 +8,18 @@
 - 3.ahooks 类似vueuse
 - 4.zustand 状态管理（已对比`redux、dva、react-toolkit、mobx，以及react的useContext结合useReducer等的状态管理方式`）
 - 5.immer 弥补了 Javascript 没有不可变数据结构的问题
-- 6.lodash-es 工具库（更现代api实现的话可以采用es-toolkit）
-- 7.axios 请求库
-- 8.classnames 方便管理动态类名
+- 6.use-immer 更方便使用immer
+- 7.lodash-es 工具库（更现代api实现的话可以采用es-toolkit）
+- 8.axios 请求库
+- 9.classnames 方便管理动态类名
+- 其他推荐：alova.js 下一代请求工具、swr 方便请求管理
 
 ## 项目规范
 - 1.全面 ESM 规范
 - 2.包管理器：已强制使用 `pnpm`
 - 3.样式：采用 BEM 类名规范
 - 4.文件夹+组件文件名：采用 kebab-case 形式（这种最可靠，尤其是在版本控制共享代码时，不同操作系统对大小写的敏感性不同）
-- 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
+- 其他：`eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig`
 - （eslint已使用最新版：.eslintignore弃用，改用 ignores 配置项）
 
 ## 备注
