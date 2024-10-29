@@ -3,7 +3,7 @@ import './index.scss';
 import { useUserStore } from '@/store';
 
 function Create() {
-  const [count, setCount] = useState(99);
+  const [count, _setCount] = useState(99);
 
   const { userInfo, updateUserName } = useUserStore();
 
