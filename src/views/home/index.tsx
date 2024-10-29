@@ -3,9 +3,9 @@ import './index.scss';
 
 import { useDesign } from '@/hooks';
 
-const { prefixCls } = useDesign('pg-home');
-
 function Home() {
+  const { prefixCls } = useDesign('pg-home');
+
   const [count, setCount] = useState(0);
 
   return (
