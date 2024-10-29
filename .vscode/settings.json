@@ -1,0 +1,26 @@
+{
+  // 开启自动修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  // 保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // 默认格式化工具选择prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 配置该项，新建文件时默认就是space：2
+  "editor.tabSize": 2,
+  // stylelint校验的文件格式
+  "stylelint.validate": ["css", "scss", "html"],
+  // md文件不自动格式化
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.formatOnSave": false
+  }
+}
