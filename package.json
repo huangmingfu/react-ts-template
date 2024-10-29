@@ -13,6 +13,7 @@
     "preview:pro": "pnpm vite preview --mode pro",
     "format": "prettier --write \"./**/*.{html,ts,tsx,js,jsx,json}\"",
     "lint": "eslint .",
+    "lint:style": "stylelint \"./**/*.{css,scss,html}\" --fix",
     "preinstall": "npx only-allow pnpm",
     "push": "git add . && git commit -m \"feat: update\" && git push -u origin master"
   },
@@ -36,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.13",
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
+    "sass": "^1.80.4",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9"
