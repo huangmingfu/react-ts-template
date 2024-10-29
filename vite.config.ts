@@ -2,6 +2,7 @@ import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
@@ -10,7 +11,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
+        '@': path.resolve(fileURLToPath(new URL(".", import.meta.url)), 'src')
       }
     },
     css: {
@@ -38,13 +39,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       env.VITE_NODE_ENV === 'develop'
         ? undefined
         : {
-            /** 打包时移除 console.log */
-            pure: ['console.log'],
-            /** 打包时移除 debugger */
-            drop: ['debugger'],
-            /** 打包时移除所有注释 */
-            legalComments: 'none'
-          },
+          /** 打包时移除 console.log */
+          pure: ['console.log'],
+          /** 打包时移除 debugger */
+          drop: ['debugger'],
+          /** 打包时移除所有注释 */
+          legalComments: 'none'
+        },
     build: {
       // target: 'es2015',
       outDir: env.VITE_OUT_DIR || 'dist',

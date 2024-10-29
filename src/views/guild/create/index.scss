@@ -1,12 +1,10 @@
-$prefix-cls: 'pg-home';
-
-.#{$prefix-cls} {
+.pg-guild-create {
   width: 155px;
   font-size: 23px;
   box-sizing: border-box;
 
   &__count {
     font-weight: bold;
-    color: skyblue;
+    color: $color-test;
   }
 }
