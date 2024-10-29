@@ -2,7 +2,7 @@
  * @see copy https://github.com/element-plus/element-plus/blob/dev/packages/hooks/use-namespace/index.ts
  */
 
-export const DEFAULT_NAMESPACE = 'el';
+export const DEFAULT_NAMESPACE = 'v';
 
 const statePrefix = 'is-';
 
