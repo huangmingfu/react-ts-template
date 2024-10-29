@@ -1,5 +1,5 @@
 import { Outlet, RouteObject } from 'react-router-dom';
-import { LazyLoad } from '../lazy-load';
+import { LazyLoad } from '../utils/lazy-load';
 import { lazy } from 'react';
 
 export default [

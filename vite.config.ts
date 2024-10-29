@@ -47,7 +47,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           legalComments: 'none'
         },
     build: {
-      // target: 'es2015',
+      target: 'esnext',// target: 'es2015',
       outDir: env.VITE_OUT_DIR || 'dist',
       minify: 'esbuild',
       chunkSizeWarningLimit: 1500,
