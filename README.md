@@ -3,18 +3,18 @@
 > 集成了一些项目规范，封装了axios、router等，配置了环境变量、全局变量等。
 
 ## 技术栈（以下都是最新版2024-10-29）
-- 1. react相关库（react18、react-dom、react-router-dom）
-- 2. scss 预编译（已使用最新版，@import 弃用，改用 @use）
-- 3. ahooks 类似vueuse
-- 4. zustand 状态管理（已对比react-redux、dva、react-toolkit、mobx）
-- 5. immer 弥补了 Javascript 没有不可变数据结构的问题
-- 6. lodash-es 工具库（更现代api实现的话可以采用es-toolkit）
-- 7. axios 请求库
-- 8. classnames 方便管理动态类名
+- 1.react相关库（react18、react-dom、react-router-dom）
+- 2.scss 预编译（已使用最新版，@import 弃用，改用 @use）
+- 3.ahooks 类似vueuse
+- 4.zustand 状态管理（已对比react-redux、dva、react-toolkit、mobx）
+- 5.immer 弥补了 Javascript 没有不可变数据结构的问题
+- 6.lodash-es 工具库（更现代api实现的话可以采用es-toolkit）
+- 7.axios 请求库
+- 8.classnames 方便管理动态类名
 
 ## 项目规范
-- 1. 全面 ESM 规范
-- 2. 包管理器：已强制使用 `pnpm`
-- 3. 样式：采用 BEM 类名规范
-- 4. 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
+- 1.全面 ESM 规范
+- 2.包管理器：已强制使用 `pnpm`
+- 3.样式：采用 BEM 类名规范
+- 4.其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
 - （eslint已使用最新版：.eslintignore弃用，改用 ignores 配置项）
