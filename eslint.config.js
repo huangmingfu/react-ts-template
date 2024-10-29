@@ -26,8 +26,8 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
-      '@typescript-eslint/no-unused-vars': 'off',
-      'react-refresh/only-export-components': 'off'
+      '@typescript-eslint/no-unused-vars': 'off', // 禁用 TypeScript 未使用变量的警告
+      'react-refresh/only-export-components': 'off' // 禁用 react-refresh 插件中仅导出组件的规则
     },
     languageOptions: {
       parserOptions: {
