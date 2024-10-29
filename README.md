@@ -19,3 +19,7 @@
 - 4.文件夹+组件文件名：采用 kebab-case 形式（这种最可靠，尤其是在版本控制共享代码时，不同操作系统对大小写的敏感性不同）
 - 其他：eslint、prettier、stylelint、commitlint、husky、lint-staged、editorconfig
 - （eslint已使用最新版：.eslintignore弃用，改用 ignores 配置项）
+
+## 备注
+> package.json中的命令：
+> lint:lint-staged 相当于 lint:all
