@@ -1,5 +1,6 @@
 import { lazy } from 'react';
-import { createBrowserRouter, Navigate, RouteObject } from 'react-router-dom';
+import { Navigate, RouteObject, createBrowserRouter } from 'react-router-dom';
+
 import { LazyLoad, getRoutesFromModules } from './utils';
 
 /** 动态导入 modules 的路由 */

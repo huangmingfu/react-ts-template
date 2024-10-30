@@ -12,8 +12,8 @@
     "preview:dev": "pnpm vite preview --mode dev",
     "preview:test": "pnpm vite preview --mode test",
     "preview:pro": "pnpm vite preview --mode pro",
-    "lint:eslint": "eslint --max-warnings 0  \"{src,mock,build}/**/*.{ts,tsx}\" --fix",
-    "lint:format": "prettier --write \"./**/*.{html,ts,tsx,js,jsx,json}\"",
+    "lint:eslint": "eslint --max-warnings 0  \"{src,mock,build}/**/*.{ts,tsx,js,jsx,cjs,mjs}\" --fix",
+    "lint:format": "prettier --write \"./**/*.{ts,tsx,js,jsx,cjs,mjs,html}\"",
     "lint:style": "stylelint \"./**/*.{css,scss}\" --fix",
     "lint:all": "pnpm run lint:eslint && pnpm run lint:style && pnpm run lint:format",
     "lint:lint-staged": "lint-staged",
@@ -25,7 +25,7 @@
   "lint-staged": {
     "*.{ts,tsx,js,jsx,cjs,mjs}": "eslint --fix",
     "*.{css,scss}": "stylelint --fix",
-    "*.{ts,tsx,js,jsx,cjs,mjs,css,scss,html}": "prettier --write"
+    "*.{ts,tsx,js,jsx,cjs,mjs,html}": "prettier --write"
   },
   "dependencies": {
     "ahooks": "^3.8.1",
