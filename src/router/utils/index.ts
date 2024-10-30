@@ -3,7 +3,7 @@ import { RouteObject } from 'react-router-dom';
 export * from './lazy-load';
 
 /**
- * 基于 router/modules 文件结构动态生成路由
+ * 基于 router/modules 文件导出的内容动态生成路由
  */
 export function getRoutesFromModules() {
   const routes: RouteObject[] = [];
