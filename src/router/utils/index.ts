@@ -3,10 +3,10 @@ import { RouteObject } from 'react-router-dom';
 export * from './lazy-load';
 
 /**
- * 基于 src/router/routes/modules 文件结构动态生成路由
+ * 基于 router/modules 文件结构动态生成路由
  */
 export function getRoutesFromModules() {
-  const menuModules: RouteObject[] = [];
+  const routes: RouteObject[] = [];
 
   const modules = import.meta.glob('../modules/**/*.tsx', { eager: true }) as Record<
     string,
@@ -15,8 +15,8 @@ export function getRoutesFromModules() {
   Object.keys(modules).forEach((key) => {
     const mod = modules[key].default || {};
     const modList = Array.isArray(mod) ? [...mod] : [mod];
-    menuModules.push(...modList);
+    routes.push(...modList);
   });
 
-  return menuModules;
+  return routes;
 }
