@@ -8,13 +8,13 @@ const axiosInstance: AxiosInstance = axios.create({
 
 // 请求拦截器
 axiosInstance.interceptors.request.use(
-  (res: InternalAxiosRequestConfig) => {
+  (config: InternalAxiosRequestConfig) => {
     // 在请求里加入token认证信息
-    // const token = getToken()//localStorage.getItem('token')获取的
+    // const token = getToken() // localStorage.getItem('token')
     // if (token) {
     //     config.headers.Authorization = `Bearer ${token}`
     // }
-    return res;
+    return config;
   },
   (err: AxiosError) => {
     return Promise.reject(err);

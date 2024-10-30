@@ -2,7 +2,7 @@ import { AxiosRequestConfig } from 'axios';
 
 import axiosInstance from './service';
 
-/** 请依据 axiosInstance 看情况修改 */
+/** 根据 axiosInstance 配置看情况修改 */
 export const GET = <T = any, P = Record<string, any>>(
   url: string,
   params?: P,
