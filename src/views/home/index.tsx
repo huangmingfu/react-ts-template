@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import './index.scss';
 
 import { useDesign } from '@/hooks';
+
+import './index.scss';
 
 function Home() {
   const { prefixCls } = useDesign('pg-home');
