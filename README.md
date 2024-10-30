@@ -2,7 +2,7 @@
 
 > 一套基于`react18、ts、vite5`的项目模板,帮助快速搭建`react项目`。集成了一些`项目规范`，封装了`axios`、`router路由懒加载`等，配置了`环境变量、scss样式全局变量`等，集成了`import 顺序自动美化排序插件`。
 
-## 技术栈（以下都是最新版2024-10-29）
+## 技术栈（以下都是最新版2024-10-30）
 
 - 1.react相关库（react18、react-dom、react-router-dom）
 - 2.scss 预编译（已使用最新版，@import 弃用，改用 @use）
