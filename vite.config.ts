@@ -52,6 +52,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       outDir: env.VITE_OUT_DIR || 'dist',
       minify: 'esbuild',
       chunkSizeWarningLimit: 1500,
+      sourcemap: false,
       rollupOptions: {
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
