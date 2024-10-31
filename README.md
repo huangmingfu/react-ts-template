@@ -18,7 +18,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - **Axios**：封装 HTTP 请求库，更方便与后端接口对接。
 - **classnames**：动态类名管理工具，特别适合条件渲染样式。
 
-### 🔧 其他未安装的推荐工具
+### 🔧 其他推荐工具
 
 - **Alova.js**：新一代请求工具，便于请求数据管理。
 - **SWR**：数据请求缓存和同步管理的另一选择。
