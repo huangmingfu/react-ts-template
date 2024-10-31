@@ -4,7 +4,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 
 ## 技术栈一览
 
-> （以下截止2024-10-30前都是最新版本）
+> （以下截止2024-10-31前都是最新版本）
 
 ### 🛠 核心技术栈
 
