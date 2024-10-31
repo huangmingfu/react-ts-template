@@ -9,6 +9,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd());
   return {
+    base: env.VITE_NODE_ENV === 'develop' ? '/react-ts-template/' : undefined, // 只为github pages 配置，自行删除
     plugins: [react()],
     resolve: {
       alias: {
