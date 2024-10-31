@@ -3,7 +3,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { ConfigEnv, UserConfig, defineConfig, loadEnv } from 'vite';
 
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
