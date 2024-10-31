@@ -9,6 +9,10 @@ export default [
     element: <Outlet />, // 没有元素，呈现空白
     children: [
       {
+        path: '/guild/count',
+        element: LazyLoad(lazy(() => import('@/views/guild/count')))
+      },
+      {
         path: '/guild/create',
         element: LazyLoad(lazy(() => import('@/views/guild/create')))
       }
