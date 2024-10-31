@@ -32,9 +32,6 @@ importers:
       react-router-dom:
         specifier: ^6.27.0
         version: 6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      use-immer:
-        specifier: ^0.10.0
-        version: 0.10.0(immer@10.1.1)(react@18.3.1)
       zustand:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.3.12)(immer@10.1.1)(react@18.3.1)
@@ -2507,12 +2504,6 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
-
-  use-immer@0.10.0:
-    resolution: {integrity: sha512-/eVwNR4TG9Tm/dd+aHYLLaI0FLfYKlkTqKMkn78Ah/EYVzWd/zJIgpkdoFEKbhQJOGo8XN7/mWrTx0exp1c+Ug==}
-    peerDependencies:
-      immer: '>=8.0.0'
-      react: ^16.8.0 || ^17.0.1 || ^18.0.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -5096,11 +5087,6 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
-
-  use-immer@0.10.0(immer@10.1.1)(react@18.3.1):
-    dependencies:
-      immer: 10.1.1
-      react: 18.3.1
 
   util-deprecate@1.0.2: {}
 
