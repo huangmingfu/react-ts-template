@@ -17,6 +17,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - **Lodash-es**：提供常用工具函数。若更偏向现代 ES 实现，也可以考虑 `es-toolkit`。
 - **Axios**：封装 HTTP 请求库，更方便与后端接口对接。
 - **classnames**：动态类名管理工具，特别适合条件渲染样式。
+- **Dayjs**：轻量级的日期处理库，提供类似 Moment.js 的 API，但体积更小，性能更好。
 
 ### 🔧 其他推荐工具
 
