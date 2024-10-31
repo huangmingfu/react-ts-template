@@ -15,7 +15,7 @@ export function uuid() {
  * @param {string} text 要复制的文本
  * @param {string | null} 复制成功时的提示文本
  */
-export function copy(text: string, prompt: string | null = '已成功复制到剪切板!') {
+export function copy(text: string, _prompt: string | null = '已成功复制到剪切板!') {
   if (navigator.clipboard) {
     return navigator.clipboard
       .writeText(text)
