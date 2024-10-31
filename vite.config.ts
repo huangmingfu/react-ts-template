@@ -9,7 +9,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd());
   return {
-    base: env.VITE_NODE_ENV === 'develop' ? './' : undefined, // 只为github pages 配置，自行删除
+    base: env.VITE_NODE_ENV === 'develop' ? './' : undefined, // 只为github pages配置，可根据情况自行删除
     plugins: [react()],
     resolve: {
       alias: {
