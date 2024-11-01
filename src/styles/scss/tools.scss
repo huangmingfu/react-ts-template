@@ -1,3 +1,8 @@
+@use 'sass:meta';
+@use 'sass:list';
+@use 'sass:map';
+
+/** 滚动条 */
 @mixin scrollbar($size: 7px, $color: rgba(0, 0, 0, 0.5)) {
   scrollbar-width: thin;
   scrollbar-color: $color transparent;
@@ -23,6 +28,7 @@
   }
 }
 
+/** 文字描边 */
 @mixin text-stroke($color: #fff, $width: 1px) {
   text-shadow:
     0 -#{$width} #{$color},
@@ -33,4 +39,45 @@
     #{$width} #{$width} #{$color},
     #{$width} -#{$width} #{$color},
     -#{$width} #{$width} #{$color};
+}
+
+/** 媒体查询 */
+// 创建数据集
+$arr: (
+  'phone': (
+    320px,
+    480px
+  ),
+  'pad': (
+    481px,
+    768px
+  ),
+  'pc': (
+    769px,
+    1024px
+  ),
+  'desktop': (
+    1025px,
+    1200px
+  ),
+  'tv': 1201px
+);
+
+@mixin set-media($key) {
+  // 根据key来获取数组项
+  $bp: map.get($arr, $key); // map-get 方法 返回 key的索引值
+
+  @if meta.type-of($bp) == 'list' {
+    // type-of 类型判断(x,y)结构返回 list
+    $min: list.nth($bp, 1); // nth(数组,索引) 下标从1开始 返回索引的值
+    $max: list.nth($bp, 2);
+
+    @media (min-width: $min) and (max-width: $max) {
+      @content; // @content 可以当做一个插槽
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
 }
