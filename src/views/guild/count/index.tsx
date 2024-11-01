@@ -5,7 +5,7 @@ import { useDesign, useRouter } from '@/hooks';
 import './index.scss';
 
 function Count() {
-  const { prefixCls } = useDesign('pg-count');
+  const { prefixCls } = useDesign('pg-guild-count');
 
   const [count, setCount] = useState(0);
 
