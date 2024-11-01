@@ -6,6 +6,7 @@ export function useRouter() {
 
   const router = useMemo(
     () => ({
+      go: (delta: number) => navigate(delta),
       back: () => navigate(-1),
       forward: () => navigate(1),
       reload: () => window.location.reload(),

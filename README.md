@@ -47,6 +47,17 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 
 其中，**`lint:lint-staged` 相当于 `lint:all`**，实现对全部代码的质量检查和格式化。
 
+## 其他
+
+### 📦 关于路由缓存 keep-alive
+
+> React 官方暂时没有实现 vue \<keep-alive\> 类似的功能。React 官方出于两点考虑拒绝添加这个功能，具体可以自行搜索查阅。为了达到状态保存的效果，官方推荐以下两种手动保存状态的方式：
+
+- 将需要保存状态组件的 state 提升至父组件中保存。
+- 使用 CSS visible 属性来控制需要保存状态组件的渲染，而不是使用 if/else，以避免 React 将其卸载。
+
+> 不过也有一些相关库实现了这个功能，如：react-router-cache-route、react-activation、keepalive-for-react等等，如果项目中需要状态缓存处理的数据量较小，那最好还是按照 React 官方的建议，手动解决状态缓存问题。
+
 ---
 
 ## 总结
