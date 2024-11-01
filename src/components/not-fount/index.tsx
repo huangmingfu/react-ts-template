@@ -11,7 +11,11 @@ function NotFount() {
     }, 1000);
   }, [router]);
 
-  return <div>404------1s后跳转到首页</div>;
+  return (
+    <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+      404------（1s后跳转到首页）
+    </div>
+  );
 }
 
 export default NotFount;
