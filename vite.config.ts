@@ -49,19 +49,17 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
             legalComments: 'none'
           },
     build: {
-      target: 'esnext', // target: 'es2015',
+      target: 'esnext', // 'es2015'
       outDir: env.VITE_OUT_DIR || 'dist',
-      minify: 'esbuild',
       chunkSizeWarningLimit: 1500,
-      sourcemap: false,
       rollupOptions: {
         output: {
-          chunkFileNames: 'assets/js/[name]-[hash].js',
-          entryFileNames: 'assets/js/[name]-[hash].js',
-          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-          // manualChunks: {
-          //   vendor: ['antd']
-          // }
+          chunkFileNames: 'js/[name]-[hash].js',
+          entryFileNames: 'js/[name]-[hash].js',
+          assetFileNames: '[ext]/[name]-[hash].[ext]',
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom', 'react-router-dom']
+          }
         }
       }
     }
