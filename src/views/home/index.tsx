@@ -10,7 +10,6 @@ import viteLogo from '/vite.svg';
 function Home() {
   const [count, setCount] = useState(0);
   const router = useRouter();
-
   return (
     <div className="pg-home">
       <div>

@@ -7,7 +7,8 @@ import { LazyExoticComponent, ReactNode, Suspense } from 'react';
  */
 export const LazyLoad = (Component: LazyExoticComponent<() => JSX.Element>): ReactNode => {
   return (
-    <Suspense fallback={<div>loading...</div>}>
+    // loading效果可自行修改为ui组件库的loading组件
+    <Suspense fallback={<div className="route-loading"></div>}>
       <Component />
     </Suspense>
   );

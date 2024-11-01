@@ -1,1 +1,30 @@
 /** 公共样式 */
+
+/* HTML: <div class="route-loading"></div> */
+.route-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 22px;
+  color: #514b82;
+  border: 2px solid;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.route-loading::before {
+  position: absolute;
+  margin: 2px;
+  background: currentcolor;
+  border-radius: inherit;
+  content: '';
+  animation: l6 2s infinite;
+  inset: 0 100% 0 0;
+
+  @keyframes l6 {
+    100% {
+      inset: 0;
+    }
+  }
+}
