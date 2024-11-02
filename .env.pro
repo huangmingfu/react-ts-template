@@ -1,9 +1,6 @@
 # 环境
 VITE_NODE_ENV = production
 
-# 端口号
-VITE_APP_PORT = 5173
-
 # 接口前缀
 VITE_APP_BASE_API = '/pro-api'
 

@@ -9,7 +9,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd());
   return {
-    base: env.VITE_NODE_ENV === 'develop' ? './' : undefined, // 只为github pages配置，可根据情况自行删除
+    base: env.VITE_NODE_ENV === 'development' ? './' : undefined, // 只为github pages配置，可根据情况自行删除
     plugins: [react()],
     resolve: {
       alias: {
@@ -38,7 +38,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       }
     },
     esbuild:
-      env.VITE_NODE_ENV === 'develop'
+      env.VITE_NODE_ENV === 'development'
         ? undefined
         : {
             /** 打包时移除 console.log */
@@ -59,6 +59,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           assetFileNames: '[ext]/[name]-[hash].[ext]',
           manualChunks: {
             'react-vendor': ['react', 'react-dom', 'react-router-dom']
+            // 'vendor':['antd']
           }
         }
       }

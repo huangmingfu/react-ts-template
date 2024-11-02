@@ -5,7 +5,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
+    "dev:test": "vite --mode test",
+    "dev:pro": "vite --mode pro",
     "build:dev": "tsc -b && pnpm vite build --mode dev",
     "build:test": "tsc -b && pnpm vite build --mode test",
     "build:pro": "tsc -b && pnpm vite build --mode pro",
