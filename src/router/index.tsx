@@ -1,15 +1,16 @@
 import { lazy } from 'react';
 import { Navigate, RouteObject, createBrowserRouter } from 'react-router-dom';
 
-import { LazyLoad, getRoutesFromModules } from './utils';
-
-/** 动态导入 modules 的路由 */
-const routes = getRoutesFromModules();
+import { LazyLoad, routes } from './utils';
 
 const router: RouteObject[] = [
   {
     path: '/home',
     element: LazyLoad(lazy(() => import('@/views/home')))
+  },
+  {
+    path: '/login',
+    element: LazyLoad(lazy(() => import('@/views/login')))
   },
   ...routes, // modules 路由
   {

@@ -12,7 +12,7 @@
     <div id="root">
       <!-- 白屏阶段会执行的 CSS 加载loading动画 -->
       <style>
-        .loading {
+        .app-loading {
           position: fixed;
           top: 50%;
           left: 50%;
@@ -22,10 +22,10 @@
           justify-content: center;
           align-items: center;
         }
-        .loading h3 {
+        .app-loading .app-loading-title {
           color: #269af2;
         }
-        .loading .loader {
+        .app-loading .app-loading-loader {
           --r1: 154%;
           --r2: 68.5%;
 
@@ -67,9 +67,9 @@
           }
         }
       </style>
-      <div class="loading">
-        <div class="loader"></div>
-        <h3>%VITE_APP_TITLE%</h3>
+      <div class="app-loading">
+        <div class="app-loading-loader"></div>
+        <h3 class="app-loading-title">%VITE_APP_TITLE%</h3>
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>

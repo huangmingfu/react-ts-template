@@ -7,16 +7,16 @@ type UserInfo = {
   avatar: string;
 };
 
+interface State {
+  token: string;
+  userInfo: UserInfo;
+}
+
 type Action = {
   updateToken: (token: string) => void;
   updateUserName: (username: string) => void;
   updateUserInfo?: (userInfo: UserInfo) => void;
 };
-
-interface State {
-  token: string;
-  userInfo: UserInfo;
-}
 
 // 创建带有Immer中间件的zustand存储
 export const useUserStore = create<State & Action>()(

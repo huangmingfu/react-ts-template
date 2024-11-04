@@ -1,5 +1,7 @@
 import { lazy } from 'react';
-import { Outlet, RouteObject } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+import { RouteObject } from '@/types/router';
 
 import { LazyLoad } from '../utils/lazy-load';
 
@@ -10,7 +12,10 @@ export default [
     children: [
       {
         path: '/guild/count',
-        element: LazyLoad(lazy(() => import('@/views/guild/count')))
+        element: LazyLoad(lazy(() => import('@/views/guild/count'))),
+        meta: {
+          title: '计数标题'
+        }
       },
       {
         path: '/guild/create',
