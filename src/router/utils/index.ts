@@ -34,7 +34,6 @@ export function getRoutesFromModules() {
  */
 export function loader({ request }: LoaderFunctionArgs) {
   const pathname = getPathName(request.url);
-  console.log(`loader -->`, pathname);
   // 获取当前路由配置
   const route = searchRoute(pathname, routes);
   // 设置标题
