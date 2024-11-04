@@ -54,9 +54,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       chunkSizeWarningLimit: 1500,
       rollupOptions: {
         output: {
-          chunkFileNames: 'js/[name]-[hash].js',
-          entryFileNames: 'js/[name]-[hash].js',
-          assetFileNames: '[ext]/[name]-[hash].[ext]',
+          chunkFileNames: 'js/[name]-[hash].js', // chunk包输出的文件夹名称
+          entryFileNames: 'js/[name]-[hash].js', // 入口文件输出的文件夹名称
+          assetFileNames: '[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
           manualChunks: {
             'react-vendor': ['react', 'react-dom', 'react-router-dom']
             // 'vendor':['antd']
