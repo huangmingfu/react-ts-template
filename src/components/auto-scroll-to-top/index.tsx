@@ -1,6 +1,11 @@
 import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+/**
+ * 路由切换时页面置顶
+ * （因为react不同于vue，没有方便的scrollBehavior: () => ({ left: 0, top: 0 })的配置项，所以封装此组件）
+ * （将AutoScrollToTop包裹整个App或整个路由即可）
+ */
 const AutoScrollToTop = ({ children }: { children: any }) => {
   const location = useLocation();
   useLayoutEffect(() => {

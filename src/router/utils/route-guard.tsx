@@ -1,8 +1,35 @@
-import { FC, ReactNode } from 'react';
-import { RouteObject, useLocation } from 'react-router-dom';
+/**
+ * 第二种实现路由守卫的方式（参考）：使用高级组件包裹，监听pathname，在useEffect中作路由守卫。
+ * 不确定的影响（来源网上评论）：
+ * 在useEffect 里去做路由守卫的话是否会出现页面内容加载完后以及触发接口调用后才跳出页面的情况。
+ *
+ * React-Ts-Template 默认使用的是第一种实现方式，如果更喜欢下面这种，可以根据情况修改；
+ * 如果使用默认的实现，可以将此文件删除。
+ */
+import { FC, ReactNode, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-export const RouteGuard: FC<{ children: ReactNode; routes: RouteObject[] }> = (props) => {
+export const RouteGuard: FC<{ children: ReactNode }> = (props) => {
   const { pathname } = useLocation();
-  console.log(`pathname -->`, pathname);
+
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token') || '';
+
+  useEffect(() => {
+    if (!token) {
+      // message.error("token 过期，请重新登录!");
+      navigate('/login');
+    }
+    // 已经登录的状态
+    if (token) {
+      if (location.pathname == '/' || location.pathname == '/login') {
+        navigate('/home');
+      } else {
+        // 如果是其他路由就跳到其他的路由
+        navigate(location.pathname);
+      }
+    }
+  }, [token, pathname, navigate]);
+
   return <>{props.children}</>;
 };
