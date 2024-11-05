@@ -1,5 +1,5 @@
 function AuthTest() {
-  return <div>AuthTest权限测试</div>;
+  return <div>AuthTest权限测试403</div>;
 }
 
 export default AuthTest;

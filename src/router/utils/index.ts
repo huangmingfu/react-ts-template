@@ -8,7 +8,7 @@ export * from './lazy-load';
 export const routes = getRoutesFromModules();
 
 /** 路由白名单 */
-export const whiteList = ['/', '/login', '/home', '/404', '/guild/create', '/guild/count'];
+export const whiteList = new Set(['/', '/login', '/home', '/404', '/guild/create', '/guild/count']);
 
 /**
  * 基于 router/modules 文件导出的内容动态生成路由
@@ -41,7 +41,7 @@ export function loader({ request }: LoaderFunctionArgs) {
   // 权限校验
   const token = localStorage.getItem('token'); // useUserStore().token;
   // 未登录且不在白名单中，跳转到登录页
-  if (!token && !whiteList.includes(pathname)) {
+  if (!token && !whiteList.has(pathname)) {
     window.location.href = '/login';
     return false;
   }

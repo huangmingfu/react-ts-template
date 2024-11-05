@@ -13,7 +13,7 @@ function NotFount() {
 
   return (
     <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-      404------（1s后跳转到首页）
+      404------（1s后将跳转到首页）
     </div>
   );
 }
