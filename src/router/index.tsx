@@ -7,6 +7,12 @@ const router: RouteObject[] = [
   {
     path: '/',
     loader: loader,
+    /**
+     * 可以在Root组件（自己新建），用 useLoaderData 接收 loader 返回的数据做一些操作
+     * @see https://reactrouter.com/en/main/hooks/use-loader-data#useloaderdata
+     */
+    // element: <Root />,
+    // errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,

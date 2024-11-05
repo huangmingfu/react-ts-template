@@ -43,6 +43,7 @@ export function loader({ request }: LoaderFunctionArgs) {
   // 未登录且不在白名单中，跳转到登录页
   if (!token && !whiteList.has(pathname)) {
     window.location.href = '/login';
+    // window.location.replace(`/login?callback=${window.location.href}`);
     return false;
   }
   return true;
