@@ -9,7 +9,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd());
   return {
-    base: env.VITE_NODE_ENV === 'development' ? './' : undefined, // 只为github pages配置，可根据情况自行删除
+    base: env.VITE_NODE_ENV === 'development' ? './' : undefined, // 目前仅为github pages作的配置，可根据情况自行修改或删除
     plugins: [react()],
     resolve: {
       alias: {
@@ -19,8 +19,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     css: {
       preprocessorOptions: {
         scss: {
-          javascriptEnabled: true,
-          additionalData: `@use "@/styles/scss/var.scss" as *;` // 引入全局scss变量
+          additionalData: `@use "@/styles/scss/var.scss" as *;`, // 引入全局scss变量
+          javascriptEnabled: true
         }
       }
     },
@@ -53,16 +53,42 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       outDir: env.VITE_OUT_DIR || 'dist',
       chunkSizeWarningLimit: 1500,
       rollupOptions: {
+        // 分包
         output: {
           chunkFileNames: 'js/[name]-[hash].js', // chunk包输出的文件夹名称
           entryFileNames: 'js/[name]-[hash].js', // 入口文件输出的文件夹名称
           assetFileNames: '[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
+          // 手动分包，将第三方库拆分到单独的chunk包中
           manualChunks: {
-            'react-vendor': ['react', 'react-dom', 'react-router-dom']
-            // 'vendor':['antd']
+            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+            'vendor-utils': [
+              'axios',
+              'dayjs',
+              'immer',
+              'zustand',
+              'ahooks',
+              'classnames',
+              'lodash-es'
+            ]
+            // 'vendor-ui':['antd']
           }
         }
       }
+    },
+    // 预构建的依赖项，优化开发（该优化器仅在开发环境中使用）
+    optimizeDeps: {
+      include: [
+        'react',
+        'react-dom',
+        'react-router-dom',
+        'zustand',
+        'classnames',
+        'lodash-es',
+        'axios',
+        'dayjs',
+        'immer',
+        'ahooks'
+      ]
     }
   };
 });
