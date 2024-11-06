@@ -1,9 +1,23 @@
 {
   "name": "react-ts-template",
   "description": "一套基于react18、ts、vite5的项目模板,帮助快速搭建react项目",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@9.12.2",
+  "author": "huangmingfu <212149997@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/huangmingfu/react-ts-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangmingfu/react-ts-template"
+  },
+  "bugs": "https://github.com/huangmingfu/react-ts-template/issues",
+  "keywords": [
+    "react18-ts-template",
+    "react18",
+    "template",
+    "vite5"
+  ],
   "scripts": {
     "dev": "vite -m dev",
     "dev:test": "vite -m test",
