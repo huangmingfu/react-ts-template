@@ -8,7 +8,15 @@ export * from './lazy-load';
 export const routes = getRoutesFromModules();
 
 /** 路由白名单 */
-export const whiteList = new Set(['/', '/login', '/home', '/404', '/guild/create', '/guild/count']);
+export const whiteList = new Set([
+  '/',
+  '/login',
+  '/home',
+  '/404',
+  '/guild/create',
+  '/guild/count',
+  '/error-test'
+]);
 
 /**
  * 基于 router/modules 文件导出的内容动态生成路由

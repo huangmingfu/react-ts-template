@@ -18,6 +18,7 @@ function Count() {
       <br />
       <button onClick={() => router.push('/guild/create')}>跳转guild/create页面</button>
       <button onClick={() => (location.href = '/auth-test')}>路由权限测试</button>
+      <button onClick={() => router.push('/error-test')}>ErrorBoundary 测试</button>
     </div>
   );
 }

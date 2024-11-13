@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Navigate, RouteObject, createBrowserRouter } from 'react-router-dom';
 
+import ErrorBoundary from '../error-boundary';
 import { LazyLoad, loader, routes } from './utils';
 
 const router: RouteObject[] = [
@@ -12,7 +13,7 @@ const router: RouteObject[] = [
      * @see https://reactrouter.com/en/main/hooks/use-loader-data#useloaderdata
      */
     // element: <Root />,
-    // errorElement: <ErrorBoundary />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,
