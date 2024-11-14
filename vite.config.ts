@@ -30,10 +30,10 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       host: '0.0.0.0', // 局域网别人也可访问
       port: Number(env.VITE_APP_PORT), //端口号
       proxy: {
-        [env.VITE_APP_BASE_API]: {
-          target: env.VITE_APP_SERVICE_API,
+        [env.VITE_API_BASE_URL]: {
+          target: env.VITE_SERVER_URL,
           changeOrigin: true,
-          rewrite: (path: string) => path.replace(new RegExp('^' + env.VITE_APP_BASE_API), '')
+          rewrite: (path: string) => path.replace(new RegExp('^' + env.VITE_API_BASE_URL), '')
         }
       }
     },

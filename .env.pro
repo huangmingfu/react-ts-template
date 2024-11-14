@@ -2,10 +2,10 @@
 VITE_NODE_ENV = production
 
 # 接口前缀
-VITE_APP_BASE_API = '/pro-api'
+VITE_API_BASE_URL = '/pro-api'
 
 # 后端服务地址
-VITE_APP_SERVICE_API = 'http://localhost:8888'
+VITE_SERVER_URL = 'http://localhost:3000'
 
 # 输出路径
 VITE_OUT_DIR = dist-pro
