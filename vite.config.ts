@@ -19,8 +19,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "@/styles/scss/index.scss" as *;`, // 引入全局scss变量、样式工具函数等
-          javascriptEnabled: true
+          // additionalData的内容会在每个scss文件的开头自动注入
+          additionalData: `@use "@/styles/scss/index.scss" as *;` // 引入全局scss变量、样式工具函数等
         }
       }
     },
@@ -51,7 +51,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     build: {
       target: 'esnext', // 'es2015'
       outDir: env.VITE_OUT_DIR || 'dist',
-      chunkSizeWarningLimit: 1500,
+      chunkSizeWarningLimit: 2000, // 规定触发警告的 chunk 大小, 消除打包大小超过500kb警告
       rollupOptions: {
         // 分包
         output: {
