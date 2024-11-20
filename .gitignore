@@ -23,6 +23,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# TypeScript 缓存文件
-tsconfig.*.tsbuildinfo
