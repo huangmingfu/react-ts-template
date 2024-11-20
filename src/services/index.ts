@@ -15,7 +15,7 @@ export const GET = <T = any, P = Record<string, any>>(
     ...config
   })
     .then((res) => res?.data)
-    .catch((e) => e);
+    .catch((e) => e); // async/await就不需要加try/catch了
 };
 
 export const POST = <T = any, P = Record<string, any>>(
@@ -30,5 +30,5 @@ export const POST = <T = any, P = Record<string, any>>(
     ...config
   })
     .then((res) => res?.data)
-    .catch((e) => e);
+    .catch((e) => e); // async/await就不需要加try/catch了
 };
