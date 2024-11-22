@@ -1,3 +1,5 @@
+**中文** | [English](./README.en-US.md)
+
 GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
 在现代前端开发中，我们常常需要快速搭建一个 React 项目。而 `create-react-app` 脚手架也已经很久不维护了，为了解决这一需求，**React-Ts-Template** 应运而生！这是一个基于最新的 **React 18、TypeScript 和 Vite 5** 打造的项目模板，旨在帮助你极速启动项目，节省大量重复的配置时间。同时，模板集成了各种开发规范和流行插件，开箱即用，让你专注于业务逻辑的实现！
