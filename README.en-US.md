@@ -50,10 +50,6 @@ Besides code structure standardization, the project integrates various code qual
 - **Commitlint** + **Husky** + **Lint-Staged**: Works with Git Hooks to standardize code submissions and prevent low-quality code from entering the repository.
 - **EditorConfig**: Unified editor configuration to reduce issues caused by editor differences.
 
-### 📝 package.json Configuration
-
-Note that **`lint:lint-staged` is equivalent to `lint:all`**, implementing quality checking and formatting for all code.
-
 ## Project Structure
 
 ```tree

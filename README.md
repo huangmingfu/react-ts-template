@@ -52,10 +52,6 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - **Commitlint** + **Husky** + **Lint-Staged**：配合 Git Hooks 实现代码提交规范化，避免低质量代码入库。
 - **EditorConfig**：编辑器的统一配置，减少因编辑器差异产生的问题。
 
-### 📝 package.json 配置
-
-其中，**`lint:lint-staged` 相当于 `lint:all`**，实现对全部代码的质量检查和格式化。
-
 ## 项目结构
 
 ```tree
