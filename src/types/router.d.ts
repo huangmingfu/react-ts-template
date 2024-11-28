@@ -1,4 +1,4 @@
-import { RouteObject as ReactRouteObject } from 'react-router-dom';
+import { RouteObject as ReactRouteObject } from 'react-router';
 
 export type RouteObject = {
   meta?: {

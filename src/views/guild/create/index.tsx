@@ -27,9 +27,10 @@ export default Create;
 
 /** 
 // **** import 自动排序测试 ****
+// 复制以下，替换全部上面的import
 
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { debounce, reduce } from 'lodash-es';
 import Cmp1 from '@/components/auto-scroll-to-top';
 import Cmp2 from '@/components/not-fount';

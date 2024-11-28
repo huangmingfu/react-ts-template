@@ -2,7 +2,7 @@
 
 GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
-在现代前端开发中，我们常常需要快速搭建一个 React 项目。而 `create-react-app` 脚手架也已经很久不维护了，为了解决这一需求，**React-Ts-Template** 应运而生！这是一个基于最新的 **React 18、TypeScript 和 Vite 5** 打造的项目模板，旨在帮助你极速启动项目，节省大量重复的配置时间。同时，模板集成了各种开发规范和流行插件，开箱即用，让你专注于业务逻辑的实现！
+在现代前端开发中，我们常常需要快速搭建一个 React 项目。而 `create-react-app` 脚手架也已经很久不维护了，为了解决这一需求，**React-Ts-Template** 应运而生！这是一个基于最新的 **React 18、TypeScript 和 Vite 6** 打造的项目模板，旨在帮助你极速启动项目，节省大量重复的配置时间。同时，模板集成了各种开发规范和流行插件，开箱即用，让你专注于业务逻辑的实现！
 
 ## 功能配备
 
@@ -18,7 +18,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 ### 🛠 技术栈选型
 
 - **React 18 & React-DOM**：使用最新版 React 实现前端高性能和更流畅的用户体验。
-- **React-Router-DOM**：支持路由懒加载，优化页面切换性能。
+- **React-Router**：最新v7版本，支持路由懒加载，优化页面切换性能。
 - **SCSS 预编译**：全面采用新版 SCSS，使用 `@use` 替代 `@import`，模块化更强。
 - **ahooks**：提供丰富的 React Hooks 类似 VueUse，进一步简化逻辑代码。
 - **zustand**：轻量级的状态管理库。通过对比 Redux、Dva、React-Toolkit、MobX，以及 `useContext` 结合 `useReducer` 的管理方式，最终选择了更简单的 Zustand。

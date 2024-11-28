@@ -10,7 +10,7 @@
  * https://segmentfault.com/a/1190000044439881
  */
 import { FC, ReactNode, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router';
 
 export const RouteGuard: FC<{ children: ReactNode }> = (props) => {
   const { pathname } = useLocation();

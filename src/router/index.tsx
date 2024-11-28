@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Navigate, RouteObject, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouteObject, createBrowserRouter } from 'react-router';
 
 import ErrorBoundary from '../error-boundary';
 import { LazyLoad, loader, routes } from './utils';
@@ -40,17 +40,4 @@ const router: RouteObject[] = [
   }
 ];
 
-export default createBrowserRouter(router, {
-  /**
-   * v7 新特性（未来标志）
-   * @see https://reactrouter.com/en/main/upgrading/future
-   * 如果不想加 v7_ 等启用标志代码，可将 "react-router-dom" 降级至 6.27.0 版本
-   */
-  future: {
-    v7_fetcherPersist: true,
-    v7_relativeSplatPath: true,
-    v7_normalizeFormMethod: true,
-    v7_partialHydration: true,
-    v7_skipActionErrorRevalidation: true
-  }
-});
+export default createBrowserRouter(router);

@@ -2,7 +2,6 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import { fileURLToPath } from 'node:url';
 import tseslint from 'typescript-eslint';
 
 import js from '@eslint/js';
@@ -34,7 +33,7 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: fileURLToPath(new URL('.', import.meta.url))
+        tsconfigRootDir: import.meta.dirname
       }
     }
   }

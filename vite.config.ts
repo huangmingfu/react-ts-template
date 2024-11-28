@@ -1,6 +1,5 @@
-import path from 'node:path';
+import { resolve } from 'node:path';
 import process from 'node:process';
-import { fileURLToPath } from 'node:url';
 import { ConfigEnv, UserConfig, defineConfig, loadEnv } from 'vite';
 
 import react from '@vitejs/plugin-react-swc';
@@ -13,7 +12,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@': path.resolve(fileURLToPath(new URL('.', import.meta.url)), 'src')
+        '@': resolve(import.meta.dirname, 'src')
       }
     },
     css: {
@@ -60,7 +59,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           assetFileNames: '[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
           // 手动分包，将第三方库拆分到单独的chunk包中
           manualChunks: {
-            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+            'vendor-react': ['react', 'react-dom', 'react-router'],
             'vendor-utils': [
               'axios',
               'dayjs',
@@ -80,7 +79,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       include: [
         'react',
         'react-dom',
-        'react-router-dom',
+        'react-router',
         'zustand',
         'classnames',
         'lodash-es',
