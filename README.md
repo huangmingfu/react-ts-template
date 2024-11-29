@@ -23,7 +23,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - **ahooks**：提供丰富的 React Hooks 类似 VueUse，进一步简化逻辑代码。
 - **zustand**：轻量级的状态管理库。通过对比 Redux、Dva、React-Toolkit、MobX，以及 `useContext` 结合 `useReducer` 的管理方式，最终选择了更简单的 Zustand。
 - **Immer**：简化不可变数据结构操作，尤其在多层次嵌套对象中处理更方便。
-- **Lodash-es**：提供常用工具函数。若更偏向现代 ES 实现，也可以考虑 `es-toolkit`。
+- **es-toolkit**：一个现代的 JavaScript 实用库，提供了一系列强大的函数供日常使用，更小的体积、更好的性能（类似于lodash-es）。
 - **Axios**：封装 HTTP 请求库，更方便与后端接口对接。
 - **classnames**：动态类名管理工具，特别适合条件渲染样式。
 - **Dayjs**：轻量级的日期处理库，提供类似 Moment.js 的 API，但体积更小，性能更好。

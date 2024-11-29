@@ -31,7 +31,6 @@ export default Create;
 
 import React, { useState } from 'react';
 import { useLocation } from 'react-router';
-import { debounce, reduce } from 'lodash-es';
 import Cmp1 from '@/components/auto-scroll-to-top';
 import Cmp2 from '@/components/not-fount';
 import { useDesign } from '@/hooks';

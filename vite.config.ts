@@ -67,7 +67,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
               'zustand',
               'ahooks',
               'classnames',
-              'lodash-es'
+              'es-toolkit'
             ]
             // 'vendor-ui':['antd']
           }
@@ -82,7 +82,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         'react-router',
         'zustand',
         'classnames',
-        'lodash-es',
+        'es-toolkit',
         'axios',
         'dayjs',
         'immer',

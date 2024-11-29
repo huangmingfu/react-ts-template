@@ -21,7 +21,7 @@ In modern frontend development, we often need to quickly set up a React project.
 - **ahooks**: Provides rich React Hooks similar to VueUse, further simplifying logic code.
 - **zustand**: Lightweight state management library. After comparing Redux, Dva, React-Toolkit, MobX, and `useContext` combined with `useReducer`, we chose the simpler Zustand.
 - **Immer**: Simplifies immutable data structure operations, especially convenient for handling deeply nested objects.
-- **Lodash-es**: Provides common utility functions. If you prefer modern ES implementation, you can also consider `es-toolkit`.
+- **es-toolkit**: A modern JavaScript utility library that provides a range of powerful functions for everyday use, with a smaller size and better performance (similar to lodash-es).
 - **Axios**: Encapsulated HTTP request library for easier backend interface integration.
 - **classnames**: Dynamic class name management tool, particularly suitable for conditional style rendering.
 - **Dayjs**: Lightweight date processing library, providing APIs similar to Moment.js but with smaller size and better performance.
