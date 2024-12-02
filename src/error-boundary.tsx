@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useRouteError } from 'react-router';
 
 const ErrorBoundary: FC = () => {
-  const routeError = useRouteError() as Error;
+  const routeError = useRouteError() as any;
 
   // 可以在这里根据不同的业务逻辑处理错误或者上报给日志服务
   return (
@@ -29,8 +29,10 @@ const ErrorBoundary: FC = () => {
         }}
       >
         <p style={{ fontWeight: 'bold' }}>routeError：</p>
-        <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{routeError?.stack}</pre>
-        <p>{routeError?.message}</p>
+        <p style={{ color: 'red' }}>{routeError?.message || routeError?.error?.message}</p>
+        <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
+          {routeError?.stack || routeError?.error?.stack}
+        </pre>
       </div>
       <button
         style={{
