@@ -8,7 +8,7 @@ export * from './lazy-load';
 export const routes = getRoutesFromModules();
 
 /** 路由白名单 */
-export const whiteList = new Set([
+export const WHITE_LIST = new Set([
   '/',
   '/login',
   '/home',
@@ -49,7 +49,7 @@ export function loader({ request }: LoaderFunctionArgs) {
   // 权限校验
   const token = localStorage.getItem('token'); // useUserStore().token;
   // 未登录且不在白名单中，跳转到登录页
-  if (!token && !whiteList.has(pathname)) {
+  if (!token && !WHITE_LIST.has(pathname)) {
     window.location.replace(`/login?callback=${window.location.href}`);
     return false;
   }
