@@ -9,7 +9,7 @@ import App from './app.tsx';
 function setupApp() {
   createRoot(document.getElementById('root')!).render(
     <>
-      <Inspector keys={['ctrl', 'alt', 'd']} active={true} />
+      <Inspector keys={['ctrl', 'alt', 'd']} />
       <App />
     </>
   );
