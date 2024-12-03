@@ -1,3 +1,4 @@
+import { inspectorServer } from '@react-dev-inspector/vite-plugin';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'node:path';
 import process from 'node:process';
@@ -8,7 +9,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd());
   return {
     base: env.VITE_NODE_ENV === 'development' ? './' : undefined, // 目前仅为github pages作的配置，可根据情况自行修改或删除
-    plugins: [react()],
+    plugins: [
+      react(),
+      /**
+       * 点击页面元素，IDE直接打开对应代码插件
+       * @see https://react-dev-inspector.zthxxx.me/docs/inspector-component#setup
+       */
+      inspectorServer()
+    ],
     resolve: {
       alias: {
         '@': resolve(import.meta.dirname, 'src')
