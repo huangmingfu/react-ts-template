@@ -11,6 +11,8 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - **全局状态管理**：提供了 Zustand 全局状态管理示例代码，简化跨组件状态共享，提升开发效率。（详见`store`）
 - **Axios 请求封装**：对 Axios 进行封装，统一处理 HTTP 请求和响应，简化与后端接口的交互流程。（详见`services`）
 - **工具函数、hooks**：提供了一些方便实用的工具函数和hooks。（详见`utils`、`hooks`）
+- **react-dev-inspector集成**：点击页面元素，IDE直接打开对应代码插件，方便开发者调试代码，提高开发效率。(详见`vite.config.ts`)
+- **import顺序自动美化排序**：集成了 prettier-plugin-sort-imports 插件，可以自动美化 import 顺序，提高代码的可读性和可维护性。
 - **其他**：提供一些方便根据环境运行、打包的命令；配置了分包策略；本地反向代理解决跨域；还有详细的`保姆级注释`等等。
 
 ## 技术栈一览
