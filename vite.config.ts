@@ -55,16 +55,16 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
             legalComments: 'none'
           },
     build: {
-      target: 'esnext', // 'es2015'
+      target: 'esnext', // 最低 es2015/es6
       outDir: env.VITE_OUT_DIR || 'dist',
-      chunkSizeWarningLimit: 2000, // 规定触发警告的 chunk 大小, 消除打包大小超过500kb警告
+      chunkSizeWarningLimit: 2000, // 单个 chunk 文件的大小超过 2000kB 时发出警告（默认：超过500kb警告）
       rollupOptions: {
         // 分包
         output: {
           chunkFileNames: 'js/[name]-[hash].js', // chunk包输出的文件夹名称
           entryFileNames: 'js/[name]-[hash].js', // 入口文件输出的文件夹名称
           assetFileNames: '[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
-          // 手动分包，将第三方库拆分到单独的chunk包中
+          // 手动分包，将第三方库拆分到单独的chunk包中（注意这些包名必须存在，否则打包会报错）
           manualChunks: {
             'vendor-react': ['react', 'react-dom', 'react-router'],
             'vendor-utils': [

@@ -3,7 +3,8 @@ import axios, { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestCo
 // 创建axios实例
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL, // 请求的默认前缀 只要是发出去请求就会 默认带上这个前缀
-  timeout: 10000 // 请求超时时间：10s
+  timeout: 10000, // 请求超时时间：10s
+  headers: { 'Content-Type': 'application/json' } // 设置默认请求头
 });
 
 // 请求拦截器
