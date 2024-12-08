@@ -1,6 +1,6 @@
 /** @type {import("@commitlint/types").UserConfig} */
 export default {
-  extends: ['@commitlint/config-conventional'], // 继承 @commitlint/config-conventional 配置，即使用常规的 Commit 规范。
+  extends: ['@commitlint/config-conventional'], // 继承使用常规的 Commit 规范。
   rules: {
     'type-enum': [
       2,

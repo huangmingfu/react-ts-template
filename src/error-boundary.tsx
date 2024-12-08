@@ -3,7 +3,7 @@ import { useRouteError } from 'react-router';
 
 const ErrorBoundary: FC = () => {
   const routeError = useRouteError() as any;
-
+  console.error(routeError);
   // 可以在这里根据不同的业务逻辑处理错误或者上报给日志服务
   return (
     <div
