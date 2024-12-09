@@ -20,7 +20,7 @@ export default {
         ignorePseudoClasses: ['global', 'export']
       }
     ],
-    // Specify the alphabetical order of the attributes in the declaration block
+    // css属性排序
     'order/properties-order': [
       'position',
       'top',

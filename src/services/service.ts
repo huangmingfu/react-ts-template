@@ -35,10 +35,10 @@ axiosInstance.interceptors.response.use(
     //   default:
     //     return res.data || {};
     // }
-    return res; //res.data
+    return res; // res.data
   },
   (err: AxiosError) => {
-    // 如果接口请求报错时，也返回对象，如return { message: onErrorReason(error.message) }，这样使用async/await就不需要加try/catch
+    // 如果接口请求报错时，也可以直接返回对象，如return { message: onErrorReason(error.message) }，这样使用async/await就不需要加try/catch
     // onErrorReason(err.message) // 做一些全局的错误提示，可用ui库的message提示组件
     return Promise.resolve(err);
   }

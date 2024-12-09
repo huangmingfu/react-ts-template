@@ -53,6 +53,21 @@ const ErrorBoundary: FC = () => {
           padding: '10px 20px',
           fontSize: '16px',
           color: '#fff',
+          backgroundColor: '#4169E1',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          marginLeft: '10px'
+        }}
+        onClick={() => history.back()}
+      >
+        返回
+      </button>
+      <button
+        style={{
+          padding: '10px 20px',
+          fontSize: '16px',
+          color: '#fff',
           backgroundColor: 'skyblue',
           border: 'none',
           borderRadius: '5px',
