@@ -1,6 +1,11 @@
 /** 公共样式放置处 */
 @import '../css/reset.css'; // 重置样式
 
+/** v-show */
+.hide {
+  display: none !important;
+}
+
 /* HTML: <div class="route-loading"></div> */
 .route-loading {
   position: fixed;
