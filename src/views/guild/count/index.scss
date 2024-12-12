@@ -1,8 +1,12 @@
 $prefix-cls: 'pg-guild-count';
 
 .#{$prefix-cls} {
+  display: flex;
   font-size: 17px;
   box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &__count {
     font-weight: bold;

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { useDesign, useRouter } from '@/hooks';
+import { useLoadingStore } from '@/store';
 
 import './index.scss';
 
@@ -11,6 +12,15 @@ function Count() {
 
   const router = useRouter();
 
+  const { showLoading, hideLoading } = useLoadingStore();
+
+  const handleLoading = useCallback(() => {
+    showLoading();
+    setTimeout(() => {
+      hideLoading();
+    }, 1000);
+  }, []);
+
   return (
     <div className={prefixCls}>
       <span className={`${prefixCls}__count`}>{count}</span>
@@ -19,6 +29,7 @@ function Count() {
       <button onClick={() => router.push('/guild/create')}>跳转guild/create页面</button>
       <button onClick={() => (location.href = '/auth-test')}>路由权限测试</button>
       <button onClick={() => router.push('/error-test')}>ErrorBoundary 测试</button>
+      <button onClick={handleLoading}>loading展示，1s后关闭</button>
     </div>
   );
 }
