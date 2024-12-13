@@ -1,6 +1,6 @@
 GitHub Repository: [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
-In modern frontend development, we often need to quickly set up a React project. With the `create-react-app` scaffold no longer being maintained, **React-Ts-Template** was born to address this need! This is a project template built on the latest **React 18, TypeScript, and Vite 6**, designed to help you rapidly start your project and save considerable configuration time. The template integrates various development standards and popular plugins, ready to use out of the box, allowing you to focus on implementing business logic!
+In modern frontend development, we often need to quickly set up a React project. With the `create-react-app` scaffold no longer being maintained, **React-Ts-Template** was born to address this need! This is a project template built on the latest **React 19, TypeScript, and Vite 6**, designed to help you rapidly start your project and save considerable configuration time. The template integrates various development standards and popular plugins, ready to use out of the box, allowing you to focus on implementing business logic!
 
 ## Features
 
@@ -17,7 +17,7 @@ In modern frontend development, we often need to quickly set up a React project.
 
 ### 🛠 Technology Stack Selection
 
-- **React 18 & React-DOM**: Using the latest version of React for high frontend performance and smoother user experience.
+- **React 19 & React-DOM**: Using the latest version of React for high frontend performance and smoother user experience.
 - **React-Router**：Latest v7 version, supports lazy loading of routes, optimizes page transition performance.
 - **SCSS Preprocessing**: Fully adopts the new version of SCSS, using `@use` instead of `@import` for stronger modularity.
 - **ahooks**: Provides rich React Hooks similar to VueUse, further simplifying logic code.

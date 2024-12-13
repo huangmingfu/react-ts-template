@@ -25,7 +25,7 @@ const router: RouteObject[] = [
       },
       {
         path: '/login',
-        element: LazyLoad(lazy(() => import('@/views/login')))
+        element: LazyLoad(lazy(() => import('@/views/test/login')))
       },
       {
         path: '/404',

@@ -12,6 +12,7 @@ function App() {
     <>
       <RouterProvider router={router} />
       {isLoading && <Loading />}
+      {/* ...其他需要全局管理的，如Modal弹窗等 */}
     </>
   );
 }

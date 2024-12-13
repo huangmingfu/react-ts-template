@@ -29,7 +29,7 @@ function Home() {
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
       <br />
-      <button onClick={() => router.push('/guild/count')} style={{ fontSize: '15px' }}>
+      <button onClick={() => router.push('/test/count')} style={{ fontSize: '15px' }}>
         跳转测试页面
       </button>
     </div>
