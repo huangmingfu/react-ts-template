@@ -122,3 +122,6 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 **👉 赶快 Star 项目，开启你的 React 项目之旅！**
 
 > [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
+
+## 注意
+> 目前有一些ui库还未支持React19，注意甄别安装使用。

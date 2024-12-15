@@ -120,3 +120,6 @@ The **React-Ts-Template** project template aims to reduce developers' tedious co
 **👉 Star the project now and start your React project journey!**
 
 > [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
+
+## Note
+> Some UI libraries have not yet supported React 19. Please be cautious when installing and using them.
