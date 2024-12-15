@@ -17,19 +17,18 @@ const ErrorBoundary: FC = () => {
       }}
     >
       <h1 style={{ color: '#ff6347', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-        {routeError?.name}：渲染失败
+        {routeError?.name || 'Error'}:
       </h1>
-      <p style={{ fontSize: '16px', color: '#333' }}>发送生了错误：</p>
+      <p style={{ fontWeight: 'bold' }}>{routeError?.message || routeError?.error?.message}</p>
       <div
         style={{
-          margin: '20px 0',
+          margin: '10px 0',
           padding: '10px',
           backgroundColor: '#f7f7f7',
           borderRadius: '5px'
         }}
       >
-        <p style={{ fontWeight: 'bold' }}>routeError：</p>
-        <p style={{ color: 'red' }}>{routeError?.message || routeError?.error?.message}</p>
+        <p style={{ fontWeight: 'bold', marginBottom: '10px', color: '#ff6347' }}>Render Fail:</p>
         <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
           {routeError?.stack || routeError?.error?.stack}
         </pre>

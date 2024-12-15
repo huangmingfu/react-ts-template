@@ -2,6 +2,7 @@ import { memo } from 'react';
 
 import './index.scss';
 
+/** Loading组件示例，可替换为ui库的loading组件作二次封装 */
 function Loading() {
   return (
     <div className="pub-loading">

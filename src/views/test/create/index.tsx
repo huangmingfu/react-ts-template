@@ -33,7 +33,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router';
 import Cmp1 from '@/components/auto-scroll-to-top';
 import Cmp2 from '@/components/not-fount';
-import { useDesign } from '@/hooks';
+import { useRouter } from '@/hooks';
 import { useUserStore } from '@/store';
 import { uuid } from '@/utils';
 import { initializeApp } from '@core/app';

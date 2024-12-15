@@ -1,13 +1,13 @@
 import { useCallback, useState } from 'react';
 
-import { useDesign, useRouter } from '@/hooks';
+import { createDesign, useRouter } from '@/hooks';
 import { useLoadingStore } from '@/store';
 
 import './index.scss';
 
-function Count() {
-  const { prefixCls } = useDesign('pg-guild-count');
+const { prefixCls } = createDesign('pg-guild-count');
 
+function Count() {
   const [count, setCount] = useState(0);
 
   const router = useRouter();
