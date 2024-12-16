@@ -5,8 +5,8 @@
 
 /** 滚动条 */
 @mixin scrollbar($size: 7px, $color: rgba(0, 0, 0, 0.5)) {
-  scrollbar-width: thin;
   scrollbar-color: $color transparent;
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar-thumb {
     background-color: $color;

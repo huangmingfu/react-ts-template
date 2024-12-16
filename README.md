@@ -124,4 +124,8 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 > [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
 ## 注意
-> 目前有一些ui库还未支持React19，注意甄别安装使用。
+> 目前有一些ui库还未支持React19，注意甄别安装使用。  
+> 本项目并未使用19版本的相关特性，如需要，可以直接使用如下命令降级到18版本。  
+```bash
+pnpm install react@18.3.1 react-dom@18.3.1
+```

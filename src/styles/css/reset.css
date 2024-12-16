@@ -1,8 +1,8 @@
 *,
 *::after,
 *::before {
-  outline: none;
   box-sizing: border-box;
+  outline: none;
 }
 
 html,
@@ -145,8 +145,8 @@ sub {
 }
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 input,
@@ -160,9 +160,9 @@ button {
 select {
   text-indent: 0.01px;
   text-overflow: '';
+  appearance: none;
   border: 0;
   border-radius: 0;
-  appearance: none;
 }
 
 select::-ms-expand {

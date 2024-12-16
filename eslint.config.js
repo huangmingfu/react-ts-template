@@ -6,7 +6,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', '/dist*', '/config/', '/build/', '/node_modules/*', '/*.js'] },
+  { ignores: ['dist', 'dist*', 'node_modules'] },
   {
     settings: { react: { version: '19.0' } },
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

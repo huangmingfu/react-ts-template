@@ -21,12 +21,12 @@
 
 .route-loading::before {
   position: absolute;
+  inset: 0 100% 0 0;
   margin: 2px;
+  content: '';
   background: currentcolor;
   border-radius: inherit;
-  content: '';
   animation: l6 2s infinite;
-  inset: 0 100% 0 0;
 
   @keyframes l6 {
     100% {
