@@ -13,9 +13,9 @@ export const WHITE_LIST = new Set([
   '/login',
   '/home',
   '/404',
-  '/guild/create',
-  '/guild/count',
-  '/error-test'
+  '/test/create',
+  '/test/count',
+  '/test/error-test'
 ]);
 
 /**
@@ -47,7 +47,7 @@ export function loader({ request }: LoaderFunctionArgs) {
   // 设置标题
   document.title = route.meta?.title || import.meta.env.VITE_APP_TITLE;
   // 权限校验
-  const token = localStorage.getItem('token'); // useUserStore().token;
+  const token = localStorage.getItem('token');
   // 未登录且不在白名单中，跳转到登录页
   if (!token && !WHITE_LIST.has(pathname)) {
     window.location.replace(`/login?callback=${window.location.href}`);

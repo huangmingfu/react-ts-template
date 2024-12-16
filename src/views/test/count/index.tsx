@@ -26,7 +26,7 @@ function Count() {
       <span className={`${prefixCls}__count`}>{count}</span>
       <button onClick={() => setCount(count + 1)}>count++</button>
       <br />
-      <button onClick={() => router.push('/test/create')}>跳转guild/create页面</button>
+      <button onClick={() => router.push('/test/create')}>跳转create页面</button>
       <button onClick={() => (location.href = '/test/auth-test')}>路由权限测试</button>
       <button onClick={() => router.push('/test/error-test')}>ErrorBoundary 测试</button>
       <button onClick={handleLoading}>loading展示，1s后关闭</button>
