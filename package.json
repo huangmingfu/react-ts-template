@@ -29,6 +29,7 @@
     "preview:dev": "pnpm vite preview -m dev",
     "preview:test": "pnpm vite preview -m test",
     "preview:pro": "pnpm vite preview -m pro",
+    "ts:check": "tsc --noEmit",
     "lint:eslint": "eslint --max-warnings 0  \"**/*.{ts,tsx,js,jsx,cjs,mjs}\" --fix",
     "lint:format": "prettier --write \"**/*.{ts,tsx,js,jsx,cjs,mjs,html}\"",
     "lint:style": "stylelint \"**/*.{css,scss}\" --fix",
