@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'node:path';
 import process from 'node:process';
 import { ConfigEnv, UserConfig, defineConfig, loadEnv } from 'vite';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
@@ -15,7 +16,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
        * 点击页面元素，IDE直接打开对应代码插件（本项目配置的快捷键是：ctrl+alt+q，详见main.tsx）
        * @see https://react-dev-inspector.zthxxx.me/docs/inspector-component#setup
        */
-      inspectorServer()
+      inspectorServer(),
+      // 在浏览器中直接看到上报的类型错误（更严格的类型校验）
+      checker({
+        typescript: true,
+        eslint: {
+          lintCommand: 'eslint "./src/**/*.{ts,tsx}"'
+        }
+      })
     ],
     resolve: {
       alias: {

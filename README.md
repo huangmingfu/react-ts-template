@@ -98,7 +98,6 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 ├── lint-staged.config.js # Lint-Staged 配置文件，用于在 Git 提交前自动运行 Linters
 ├── package.json # 项目依赖配置文件
 ├── tsconfig.json # TypeScript 配置文件
-├── tsconfig.node.json # Node.js 环境的 TypeScript 配置文件
 └── vite.config.ts # Vite 配置文件，用于定义 Vite 项目的构建和服务选项
 ```
 

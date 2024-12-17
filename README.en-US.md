@@ -96,7 +96,6 @@ Besides code structure standardization, the project integrates various code qual
 ├── lint-staged.config.js # Lint-Staged configuration file for running Linters before Git commits
 ├── package.json # Project dependency configuration file
 ├── tsconfig.json # TypeScript configuration file
-├── tsconfig.node.json # Node.js environment TypeScript configuration file
 └── vite.config.ts # Vite configuration file for build and service options
 ```
 
