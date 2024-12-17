@@ -21,6 +21,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       checker({
         typescript: true,
         eslint: {
+          useFlatConfig: true,
           lintCommand: 'eslint "./src/**/*.{ts,tsx}"'
         }
       })

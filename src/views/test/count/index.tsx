@@ -19,7 +19,7 @@ function Count() {
     setTimeout(() => {
       hideLoading();
     }, 1000);
-  }, []);
+  }, [hideLoading, showLoading]);
 
   return (
     <div className={prefixCls}>
