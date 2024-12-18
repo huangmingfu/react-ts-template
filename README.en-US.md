@@ -121,8 +121,8 @@ The **React-Ts-Template** project template aims to reduce developers' tedious co
 > [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
 ## Note
-> Currently, some UI libraries do not support React 19. Please be cautious when installing and using them.
-> This project does not use any features specific to version 19. If needed, you can directly downgrade to version 18 using the following command.
+> 1.Currently, some UI libraries do not support React 19. Please be cautious when installing and using them.
+> 2.This project does not use any features specific to version 19. If needed, you can directly downgrade to version 18 using the following command.
 ```bash
 pnpm install react@18.3.1 react-dom@18.3.1
 ```
