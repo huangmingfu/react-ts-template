@@ -11,7 +11,7 @@ const _bem = (
   block: string,
   blockSuffix: string,
   element: string,
-  modifier: string
+  modifier: string,
 ) => {
   let cls = `${namespace}-${block}`;
   if (blockSuffix) {
@@ -89,7 +89,7 @@ const useNamespace = (block: string) => {
     em,
     is,
     m,
-    namespace
+    namespace,
   };
 };
 

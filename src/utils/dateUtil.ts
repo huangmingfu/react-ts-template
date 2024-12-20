@@ -36,7 +36,7 @@ export function formatToDate(date?: dayjs.ConfigType, format = DATE_FORMAT): str
  */
 export function isTimeBefore(
   specifiedTime: dayjs.ConfigType = dayjs(),
-  targetTime: string
+  targetTime: string,
 ): boolean {
   // 将指定时间转换为 dayjs 对象
   const specified = dayjs(specifiedTime);

@@ -13,7 +13,7 @@ const ErrorBoundary: FC = () => {
         padding: '20px',
         backgroundColor: '#fff0f0',
         borderRadius: '10px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       }}
     >
       <h1 style={{ color: '#ff6347', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
@@ -25,7 +25,7 @@ const ErrorBoundary: FC = () => {
           margin: '10px 0',
           padding: '10px',
           backgroundColor: '#f7f7f7',
-          borderRadius: '5px'
+          borderRadius: '5px',
         }}
       >
         <p style={{ fontWeight: 'bold', marginBottom: '10px', color: '#ff6347' }}>Render Fail:</p>
@@ -41,7 +41,7 @@ const ErrorBoundary: FC = () => {
           backgroundColor: '#ff6347',
           border: 'none',
           borderRadius: '5px',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
         onClick={() => location.reload()}
       >
@@ -56,7 +56,7 @@ const ErrorBoundary: FC = () => {
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
-          marginLeft: '10px'
+          marginLeft: '10px',
         }}
         onClick={() => history.back()}
       >
@@ -71,7 +71,7 @@ const ErrorBoundary: FC = () => {
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
-          marginLeft: '10px'
+          marginLeft: '10px',
         }}
         onClick={() => (location.href = '/')}
       >

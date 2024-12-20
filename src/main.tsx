@@ -11,7 +11,7 @@ function setupApp() {
     <>
       <Inspector keys={['ctrl', 'alt', 'q']} />
       <App />
-    </>
+    </>,
   );
 }
 

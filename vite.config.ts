@@ -22,22 +22,22 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         typescript: true,
         eslint: {
           useFlatConfig: true,
-          lintCommand: 'eslint "./src/**/*.{ts,tsx}"'
-        }
-      })
+          lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+        },
+      }),
     ],
     resolve: {
       alias: {
-        '@': resolve(import.meta.dirname, 'src')
-      }
+        '@': resolve(import.meta.dirname, 'src'),
+      },
     },
     css: {
       preprocessorOptions: {
         scss: {
           // additionalData的内容会在每个scss文件的开头自动注入
-          additionalData: `@use "@/styles/scss/index.scss" as *;` // 引入全局scss变量、样式工具函数等
-        }
-      }
+          additionalData: `@use "@/styles/scss/index.scss" as *;`, // 引入全局scss变量、样式工具函数等
+        },
+      },
     },
     // 反向代理解决跨域问题
     server: {
@@ -48,9 +48,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         [env.VITE_API_BASE_URL]: {
           target: env.VITE_SERVER_URL,
           changeOrigin: true,
-          rewrite: (path: string) => path.replace(new RegExp('^' + env.VITE_API_BASE_URL), '')
-        }
-      }
+          rewrite: (path: string) => path.replace(new RegExp('^' + env.VITE_API_BASE_URL), ''),
+        },
+      },
     },
     esbuild:
       env.VITE_NODE_ENV === 'development'
@@ -61,7 +61,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
             /** 打包时移除 debugger */
             drop: ['debugger'],
             /** 打包时移除所有注释 */
-            legalComments: 'none'
+            legalComments: 'none',
           },
     build: {
       target: 'esnext', // 最低 es2015/es6
@@ -83,12 +83,12 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
               'zustand',
               'ahooks',
               'classnames',
-              'es-toolkit'
-            ]
+              'es-toolkit',
+            ],
             // 'vendor-ui':['antd']
-          }
-        }
-      }
+          },
+        },
+      },
     },
     // 预构建的依赖项，优化开发（该优化器仅在开发环境中使用）
     optimizeDeps: {
@@ -102,8 +102,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         'axios',
         'dayjs',
         'immer',
-        'ahooks'
-      ]
-    }
+        'ahooks',
+      ],
+    },
   };
 });

@@ -17,27 +17,27 @@ const router: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <Navigate to="/home" /> // 重定向
+        element: <Navigate to="/home" />, // 重定向
       },
       {
         path: '/home',
-        element: LazyLoad(lazy(() => import('@/views/home')))
+        element: LazyLoad(lazy(() => import('@/views/home'))),
       },
       {
         path: '/login',
-        element: LazyLoad(lazy(() => import('@/views/test/login')))
+        element: LazyLoad(lazy(() => import('@/views/test/login'))),
       },
       {
         path: '/404',
-        element: LazyLoad(lazy(() => import('@/components/not-fount')))
+        element: LazyLoad(lazy(() => import('@/components/not-fount'))),
       },
-      ...routes // modules 路由
-    ]
+      ...routes, // modules 路由
+    ],
   },
   {
     path: '*',
-    element: <Navigate to="/404" /> // 找不到页面
-  }
+    element: <Navigate to="/404" />, // 找不到页面
+  },
 ];
 
 export default createBrowserRouter(router);

@@ -7,7 +7,7 @@ export default {
   singleQuote: true, // 字符串是否使用单引号，默认为false，使用双引号
   quoteProps: 'as-needed', // 对象键值对中的字符串是否需要加引号
   bracketSpacing: true, // 对象大括号之间是否有空格，默认为true，效果：{ foo: bar }
-  trailingComma: 'none', // 是否使用尾逗号，有三个可选值："none", "es5", "all"
+  trailingComma: 'all', // 是否使用尾逗号，有三个可选值："none", "es5", "all"
   jsxSingleQuote: false, // JSX 中的字符串是否使用单引号
   arrowParens: 'always', // 箭头函数参数是否总是使用括号
   insertPragma: false, // 是否在文件顶部插入@format注释
@@ -26,6 +26,6 @@ export default {
     '^@/components/(.*)$', // 全局组件
     '^@/(hooks|store)(.*)$', // 自定义 hooks 和 store 统一分组
     '^@/(.*)$', // 其他 @/ 开头的模块
-    '^[./]' // 当前文件夹和父文件夹的相对导入
-  ]
+    '^[./]', // 当前文件夹和父文件夹的相对导入
+  ],
 };

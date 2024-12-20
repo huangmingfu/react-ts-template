@@ -22,10 +22,10 @@ export default {
         'mod', // 不确定分类的修改
         'wip', // 开发中
         'types', // 类型修改
-        'release' // 版本发布
-      ]
+        'release', // 版本发布
+      ],
     ],
     'subject-full-stop': [0, 'never'],
-    'subject-case': [0, 'never']
-  }
+    'subject-case': [0, 'never'],
+  },
 };

@@ -47,21 +47,21 @@
 $arr: (
   'phone': (
     320px,
-    480px
+    480px,
   ),
   'pad': (
     481px,
-    768px
+    768px,
   ),
   'pc': (
     769px,
-    1024px
+    1024px,
   ),
   'desktop': (
     1025px,
-    1200px
+    1200px,
   ),
-  'tv': 1201px
+  'tv': 1201px,
 );
 
 @mixin set-media($key) {

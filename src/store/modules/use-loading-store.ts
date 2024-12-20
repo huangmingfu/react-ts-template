@@ -19,5 +19,5 @@ export const useLoadingStore = create<State & Action>((set) => ({
   isLoading: false,
   showLoading: () => set((state) => ({ ...state, count: state.count + 1, isLoading: true })),
   hideLoading: () =>
-    set((state) => ({ ...state, count: state.count - 1, isLoading: state.count - 1 > 0 }))
+    set((state) => ({ ...state, count: state.count - 1, isLoading: state.count - 1 > 0 })),
 }));

@@ -30,6 +30,6 @@ export const useUserStore = create<State & Action>()(
     updateUserName: (username) =>
       set((state) => {
         state.userInfo.username = username;
-      })
-  }))
+      }),
+  })),
 );

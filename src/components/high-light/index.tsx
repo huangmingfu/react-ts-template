@@ -8,7 +8,7 @@ function Highlight({
   children,
   keys,
   color = '#FFDA00',
-  className
+  className,
 }: {
   children: React.ReactNode;
   keys: string[];
@@ -25,7 +25,7 @@ function Highlight({
       <mark key={index} className={classnames('highlight', className)} style={{ color }}>
         {x[0] === '@' ? x.slice(1) : x}
       </mark>
-    )
+    ),
   );
 
   return <>{elements}</>;

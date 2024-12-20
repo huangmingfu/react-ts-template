@@ -15,7 +15,7 @@ export const WHITE_LIST = new Set([
   '/404',
   '/test/create',
   '/test/count',
-  '/test/error-test'
+  '/test/error-test',
 ]);
 
 /**
@@ -45,12 +45,12 @@ export function loader({ request }: LoaderFunctionArgs) {
   // 获取当前路由配置
   const route = searchRoute(pathname, routes);
   // 设置标题
-  document.title = route.meta?.title || import.meta.env.VITE_APP_TITLE;
+  document.title = route.meta?.title ?? import.meta.env.VITE_APP_TITLE;
   // 权限校验
   const token = localStorage.getItem('token');
   // 未登录且不在白名单中，跳转到登录页
   if (!token && !WHITE_LIST.has(pathname)) {
-    window.location.replace(`/login?callback=${window.location.href}`);
+    window.location.replace(`/login?callback=${encodeURIComponent(window.location.href)}`);
     return false;
   }
   return true;

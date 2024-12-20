@@ -14,21 +14,21 @@ export default [
         path: '/test/count',
         element: LazyLoad(lazy(() => import('@/views/test/count'))),
         meta: {
-          title: '计数标题'
-        }
+          title: '计数标题',
+        },
       },
       {
         path: '/test/create',
-        element: LazyLoad(lazy(() => import('@/views/test/create')))
+        element: LazyLoad(lazy(() => import('@/views/test/create'))),
       },
       {
         path: '/test/auth-test',
-        element: LazyLoad(lazy(() => import('@/views/test/auth-test')))
+        element: LazyLoad(lazy(() => import('@/views/test/auth-test'))),
       },
       {
         path: '/test/error-test',
-        element: LazyLoad(lazy(() => import('@/views/test/error-test/throw-error-comp')))
-      }
-    ]
-  }
+        element: LazyLoad(lazy(() => import('@/views/test/error-test/throw-error-comp'))),
+      },
+    ],
+  },
 ] as RouteObject[];
