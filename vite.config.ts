@@ -72,7 +72,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         output: {
           chunkFileNames: 'js/[name]-[hash].js', // chunk包输出的文件夹名称
           entryFileNames: 'js/[name]-[hash].js', // 入口文件输出的文件夹名称
-          assetFileNames: '[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]', // 静态文件输出的文件夹名称
           // 手动分包，将第三方库拆分到单独的chunk包中（注意这些包名必须存在，否则打包会报错）
           manualChunks: {
             'vendor-react': ['react', 'react-dom', 'react-router'],
