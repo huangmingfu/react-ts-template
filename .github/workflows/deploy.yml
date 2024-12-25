@@ -70,13 +70,13 @@ jobs:
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
-          pnpm run build:pro
+          pnpm run build:dev
 
         # 资源拷贝
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./dist-pro
+          source: ./dist-dev
           destination: ./_site
 
         # 上传 _site 的资源，用于后续部署
