@@ -1,6 +1,9 @@
-import { memo } from 'react';
+import { Root, createRoot } from 'react-dom/client';
 
 import './index.scss';
+
+let container: HTMLDivElement | null = null;
+let root: Root | null = null;
 
 /** Loading组件示例，可替换为ui库的loading组件作二次封装 */
 function Loading() {
@@ -30,4 +33,21 @@ function Loading() {
   );
 }
 
-export default memo(Loading);
+Loading.show = () => {
+  if (container || root) return;
+  container = document.createElement('div');
+  container.setAttribute('id', 'pub-loading');
+  root = createRoot(container);
+  root.render(<Loading />);
+  document.body.appendChild(container);
+};
+
+Loading.hide = () => {
+  if (container && root) {
+    root.unmount();
+    document.body.removeChild(container);
+    container = root = null;
+  }
+};
+
+export default Loading;
