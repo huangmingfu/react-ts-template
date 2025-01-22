@@ -14,7 +14,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       react(),
       /**
        * 点击页面元素，IDE直接打开对应代码插件（本项目配置的快捷键是：ctrl+alt+q，详见main.tsx）
-       * @see https://react-dev-inspector.zthxxx.me/docs/inspector-component#setup
+       * @see https://github.com/zthxxx/react-dev-inspector
        */
       inspectorServer(),
       // 在浏览器中直接看到上报的类型错误（更严格的类型校验）
