@@ -158,8 +158,8 @@ button {
 }
 
 select {
-  text-indent: 0.01px;
   text-overflow: '';
+  text-indent: 0.01px;
   appearance: none;
   border: 0;
   border-radius: 0;
