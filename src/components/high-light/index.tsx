@@ -15,6 +15,7 @@ function Highlight({
   color?: string;
   className?: string;
 }) {
+  // eslint-disable-next-line @eslint-react/no-children-to-array
   const string = React.Children.toArray(children).join('');
   const reg = new RegExp(keys.join('|'), 'g');
   const token = string.replace(reg, '#@$&#');
@@ -22,7 +23,7 @@ function Highlight({
     index % 2 === 0 ? (
       x
     ) : (
-      <mark key={index} className={classnames('highlight', className)} style={{ color }}>
+      <mark key={index!} className={classnames('highlight', className)} style={{ color }}>
         {x[0] === '@' ? x.slice(1) : x}
       </mark>
     ),

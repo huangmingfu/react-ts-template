@@ -34,6 +34,7 @@ const ErrorBoundary: FC = () => {
         </pre>
       </div>
       <button
+        type="button"
         style={{
           padding: '10px 20px',
           fontSize: '16px',
@@ -48,6 +49,7 @@ const ErrorBoundary: FC = () => {
         重试
       </button>
       <button
+        type="button"
         style={{
           padding: '10px 20px',
           fontSize: '16px',
@@ -63,6 +65,7 @@ const ErrorBoundary: FC = () => {
         返回
       </button>
       <button
+        type="button"
         style={{
           padding: '10px 20px',
           fontSize: '16px',

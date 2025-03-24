@@ -6,9 +6,10 @@ function NotFount() {
   const router = useRouter();
 
   useEffect(() => {
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       router.push('/');
     }, 1000);
+    return () => clearTimeout(timerId);
   }, [router]);
 
   return (
