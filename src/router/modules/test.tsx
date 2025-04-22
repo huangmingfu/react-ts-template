@@ -20,6 +20,9 @@ export default [
       {
         path: '/test/create',
         element: LazyLoad(lazy(() => import('@/views/test/create'))),
+        meta: {
+          title: 'create页面',
+        },
       },
       {
         path: '/test/auth-test',

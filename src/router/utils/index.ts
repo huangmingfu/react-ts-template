@@ -28,24 +28,35 @@ export function getRoutesFromModules() {
     string,
     Record<'default', RouteObject[]>
   >;
+  const addConfigurationToRoute = (r: RouteObject) => {
+    r.loader = (options: LoaderFunctionArgs) => {
+      // 设置标题
+      document.title = r.meta?.title ?? import.meta.env.VITE_APP_TITLE;
+      return loader(options);
+    };
+    if (r.children) {
+      r.children = r.children.map((child) => addConfigurationToRoute(child));
+    }
+    return r;
+  };
   Object.keys(modules).forEach((key) => {
     const mod = modules[key].default || {};
     const modList = Array.isArray(mod) ? [...mod] : [mod];
-    routes.push(...modList);
+    // 为每个路由添加 loader 并递归处理子路由
+    const processedRoutes = modList.map((route) => {
+      return addConfigurationToRoute(route);
+    });
+    routes.push(...processedRoutes);
   });
   return routes;
 }
 
 /**
  * 使用 loader 作路由守卫
- * @see https://reactrouter.com/en/main/route/loader
+ * @see https://reactrouter.com/start/data/route-object#loader
  */
 export function loader({ request }: LoaderFunctionArgs) {
   const pathname = getPathName(request.url);
-  // 获取当前路由配置
-  const route = searchRoute(pathname, routes);
-  // 设置标题
-  document.title = route.meta?.title ?? import.meta.env.VITE_APP_TITLE;
   // 权限校验
   const token = localStorage.getItem('token');
   // 未登录且不在白名单中，跳转到登录页
@@ -66,22 +77,4 @@ export function getPathName(url: string): string {
   } catch {
     return window.location.pathname;
   }
-}
-
-/**
- * @description 递归查询对应的路由
- * @param path 当前访问地址
- * @param routes 路由列表
- * @returns RouteObject
- */
-export function searchRoute(path: string, routes: RouteObject[] = []) {
-  let result = {};
-  for (const item of routes) {
-    if (item.path === path) return item;
-    if (item.children) {
-      const res = searchRoute(path, item.children as RouteObject[]);
-      if (Object.keys(res).length) result = res;
-    }
-  }
-  return result as RouteObject;
 }

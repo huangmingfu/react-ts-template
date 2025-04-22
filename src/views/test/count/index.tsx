@@ -31,7 +31,7 @@ function Count() {
       <button type="button" onClick={() => router.push('/test/create')}>
         跳转create页面
       </button>
-      <button type="button" onClick={() => (location.href = '/test/auth-test')}>
+      <button type="button" onClick={() => router.push('/test/auth-test')}>
         路由权限测试
       </button>
       <button type="button" onClick={() => router.push('/test/error-test')}>
