@@ -110,7 +110,7 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 - 将需要保存状态组件的 state 提升至父组件中保存。
 - 使用 CSS visible 属性来控制需要保存状态组件的渲染，而不是使用 if/else，以避免 React 将其卸载。
 
-> 不过也有一些相关库实现了这个功能，如：react-router-cache-route、react-activation、keepalive-for-react等等，如果项目中需要状态缓存处理的数据量较小，那最好还是按照 React 官方的建议，手动解决状态缓存问题。
+> 不过也有一些相关库实现了这个功能，如：`react-router-cache-route、react-activation、keepalive-for-react` 等等，如果项目中需要状态缓存处理的数据量较小，那最好还是按照 React 官方的建议，手动解决状态缓存问题。
 
 ---
 
@@ -123,8 +123,10 @@ GitHub 项目地址：[React-Ts-Template](https://github.com/huangmingfu/react-t
 > [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
 ## 注意
-> 1.目前有一些ui库还未支持React19，注意甄别安装使用。  
-> 2.本项目并未使用19版本的相关特性，如需要，可以直接使用如下命令降级到18版本。  
+
+> 1. 目前有一些 ui 库或其他第三方库还尚未支持 `react19`，注意甄别安装使用。
+> 2. 本项目并未使用 19 版本的相关特性，如需要可以直接使用如下命令降级到 18 版本。
+
 ```bash
 pnpm install react@18.3.1 react-dom@18.3.1
 ```
