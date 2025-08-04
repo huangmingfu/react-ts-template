@@ -24,13 +24,44 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      '@typescript-eslint/no-unused-vars': 'off', // 禁用 TypeScript 未使用变量的警告
-      'react-refresh/only-export-components': 'off', // 禁用 react-refresh 插件中仅导出组件的规则
-      '@typescript-eslint/no-explicit-any': 'off', // 允许使用any
-      '@typescript-eslint/no-unused-expressions': 'off', // 关闭对未使用的表达式的检查
+
+      // React 相关规则
+      'react-refresh/only-export-components': 'off',
       '@eslint-react/hooks-extra/no-unnecessary-use-prefix': 'off',
-      // 'react-hooks/exhaustive-deps': 'off' // 关闭依赖项检查规则
+
+      // TypeScript 相关规则优化
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+          allowTaggedTemplates: true,
+        },
+      ],
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+      '@typescript-eslint/prefer-optional-chain': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+
+      // 代码质量规则
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error',
+
+      // React Hooks 规则
+      'react-hooks/exhaustive-deps': 'warn',
+
+      // 导入规则
+      'no-duplicate-imports': 'error',
     },
     languageOptions: {
       parser: tseslint.parser,
