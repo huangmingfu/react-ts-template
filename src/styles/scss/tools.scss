@@ -8,6 +8,7 @@
   scrollbar-color: $color transparent;
   scrollbar-width: thin;
 
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   &::-webkit-scrollbar-thumb {
     background-color: $color;
     border-radius: $size;

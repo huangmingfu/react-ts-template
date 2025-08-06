@@ -9,7 +9,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd());
   return {
-    base: env.VITE_NODE_ENV === 'development' ? './' : undefined, // 此配置仅为github pages部署用，请自行修改或删除（一般情况下直接移除就行）
+    base: env.VITE_NODE_ENV === 'development' ? './' : '/', // 此配置仅为github pages部署用，请自行修改或删除（一般情况下直接移除就行）
     plugins: [
       react(),
       /**
@@ -52,15 +52,6 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         },
       },
     },
-    esbuild:
-      env.VITE_NODE_ENV === 'development'
-        ? undefined
-        : {
-            /** 打包时移除 console.log */
-            pure: ['console.log'],
-            /** 打包时移除 debugger */
-            drop: ['debugger'],
-          },
     build: {
       target: 'esnext', // 最低 es2015/es6
       outDir: env.VITE_OUT_DIR || 'dist',
