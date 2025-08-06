@@ -1,8 +1,8 @@
 **中文** | [English](./README.en-US.md)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/your-logo-url.png" alt="React-Ts-Template Logo" width="120" />
-</p>
+<!-- <p align="center">
+  <img src="https://user-images.githubusercontent.com/logo-url.png" alt="React-Ts-Template Logo" width="120" />
+</p> -->
 
 <h1 align="center">React-Ts-Template</h1>
 

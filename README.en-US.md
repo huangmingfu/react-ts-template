@@ -1,9 +1,5 @@
 GitHub Repository: [React-Ts-Template](https://github.com/huangmingfu/react-ts-template)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/your-logo-url.png" alt="React-Ts-Template Logo" width="120" />
-</p>
-
 <h1 align="center">React-Ts-Template</h1>
 
 <p align="center">
