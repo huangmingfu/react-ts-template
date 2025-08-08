@@ -35,7 +35,6 @@
 - 🛡️ **类型安全** - 完整的 TypeScript 类型定义，保障代码质量
 - 🎨 **现代 CSS** - SCSS 预编译 + BEM 命名规范，样式管理更规范
 - 🔧 **工程化规范** - ESLint、Prettier、Stylelint、Commitlint 等代码质量保障
-- 🌍 **国际化支持** - 双语文档，方便国内外开发者使用
 
 ## 🚀 快速开始
 
@@ -92,7 +91,6 @@ pnpm build:pro
 │   ├── assets           # 静态资源
 │   ├── components       # 公共组件
 │   ├── hooks            # 自定义 Hooks
-│   ├── layouts          # 布局组件
 │   ├── views            # 页面组件
 │   ├── router           # 路由配置
 │   ├── services         # 接口封装
@@ -112,7 +110,6 @@ pnpm build:pro
 
 - 基于 Vite 7 构建，冷启动时间快至毫秒级
 - 支持代码分割和动态导入，优化首屏加载速度
-- 内置 gzip/brotli 压缩，减小打包体积
 
 ### 🛡️ 完善的类型系统
 

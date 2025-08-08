@@ -31,7 +31,6 @@ GitHub Repository: [React-Ts-Template](https://github.com/huangmingfu/react-ts-t
 - 🛡️ **Type Safety** - Complete TypeScript type definitions for code quality assurance
 - 🎨 **Modern CSS** - SCSS preprocessing + BEM naming convention for standardized styling
 - 🔧 **Engineering Standards** - ESLint, Prettier, Stylelint, Commitlint and other code quality assurance tools
-- 🌍 **Internationalization** - Bilingual documentation for developers worldwide
 
 ## 🚀 Quick Start
 
@@ -88,7 +87,6 @@ pnpm build:pro
 │   ├── assets           # Static resources
 │   ├── components       # Reusable components
 │   ├── hooks            # Custom Hooks
-│   ├── layouts          # Layout components
 │   ├── views            # Page components
 │   ├── router           # Routing configuration
 │   ├── services         # API encapsulation
@@ -108,7 +106,6 @@ pnpm build:pro
 
 - Built on Vite 7 with millisecond-level cold start time
 - Supports code splitting and dynamic imports to optimize first screen loading speed
-- Built-in gzip/brotli compression to reduce bundle size
 
 ### 🛡️ Complete Type System
 
