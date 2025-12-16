@@ -5,6 +5,7 @@ import { useUserStore } from '@/store';
 import './index.scss';
 
 function Create() {
+  // eslint-disable-next-line @eslint-react/naming-convention/use-state
   const [count, _setCount] = useState(99);
 
   const { userInfo, updateUserName } = useUserStore();

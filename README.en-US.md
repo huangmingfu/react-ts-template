@@ -3,7 +3,7 @@ GitHub Repository: [React-Ts-Template](https://github.com/huangmingfu/react-ts-t
 <h1 align="center">React-Ts-Template</h1>
 
 <p align="center">
-  Modern frontend project template built with React 19, TypeScript, and Vite 7
+  Modern frontend project template built with React 19, TypeScript, and Vite
 </p>
 
 <p align="center">
@@ -21,12 +21,12 @@ GitHub Repository: [React-Ts-Template](https://github.com/huangmingfu/react-ts-t
   </a>
 </p>
 
-> With `create-react-app` scaffold no longer being maintained, developers need a modern, efficient, and out-of-the-box React project template. **React-Ts-Template** was born for this! This is a project template built on the latest **React 19, TypeScript, and Vite 7**, designed to help you rapidly start your project and save considerable configuration time.
+> With `create-react-app` scaffold no longer being maintained, developers need a modern, efficient, and out-of-the-box React project template. **React-Ts-Template** was born for this! This is a project template built on the latest **React 19, TypeScript, and Vite**, designed to help you rapidly start your project and save considerable configuration time.
 
 ## 🌟 Why Choose React-Ts-Template?
 
-- ⚡ **Lightning Fast HMR** - Built on Vite 7 for extremely fast cold start and hot module replacement
-- 🚀 **Cutting-edge Tech Stack** - React 19, TypeScript, Zustand, React-Router v7 and more latest technologies
+- ⚡ **Lightning Fast HMR** - Built on Vite for extremely fast cold start and hot module replacement
+- 🚀 **Cutting-edge Tech Stack** - React 19, TypeScript, Zustand, React-Router and more latest technologies
 - 📦 **Out-of-the-box** - Integrated routing, state management, request encapsulation, code standards and complete solutions
 - 🛡️ **Type Safety** - Complete TypeScript type definitions for code quality assurance
 - 🎨 **Modern CSS** - SCSS preprocessing + BEM naming convention for standardized styling
@@ -67,12 +67,12 @@ pnpm build:pro
 | Category | Technology | Description |
 | --- | --- | --- |
 | **Core Framework** | React 19 | Latest React version for higher performance and smoother user experience |
-| **Routing** | React-Router v7 | Supports route lazy loading, optimizes page transition performance |
+| **Routing** | React-Router | Supports route lazy loading, optimizes page transition performance |
 | **State Management** | Zustand | Lightweight state management library, simple and easy to use |
 | **Styling** | SCSS + BEM | Modular style management with clear structure (Optional: Use CSS modules xxx.module.scss) |
 | **HTTP Client** | Axios | Unified handling of HTTP requests and responses |
 | **Utility Libraries** | ahooks + es-toolkit | Rich React Hooks and JS utility functions |
-| **Build Tool** | Vite 7 | Lightning-fast build tool that enhances development experience |
+| **Build Tool** | Vite | Lightning-fast build tool that enhances development experience |
 | **Type Checking** | TypeScript | Powerful type system for code quality assurance |
 | **Code Standards** | ESLint + Prettier + Stylelint | Unified code style for improved code quality |
 
@@ -104,7 +104,7 @@ pnpm build:pro
 
 ### 🚀 High Performance Building
 
-- Built on Vite 7 with millisecond-level cold start time
+- Built on Vite with millisecond-level cold start time
 - Supports code splitting and dynamic imports to optimize first screen loading speed
 
 ### 🛡️ Complete Type System

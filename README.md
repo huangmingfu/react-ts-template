@@ -7,7 +7,7 @@
 <h1 align="center">React-Ts-Template</h1>
 
 <p align="center">
-  基于 React 19、TypeScript 和 Vite 7 构建的现代化前端项目模板
+  基于 React 19、TypeScript 和 Vite 构建的现代化前端项目模板
 </p>
 
 <p align="center">
@@ -25,12 +25,12 @@
   </a>
 </p>
 
-> 随着 `create-react-app` 脚手架停止维护，开发者需要一个现代化、高效且开箱即用的 React 项目模板。**React-Ts-Template** 应运而生！这是一个基于最新的 **React 19、TypeScript 和 Vite 7** 打造的项目模板，旨在帮助你极速启动项目，节省大量重复的配置时间。
+> 随着 `create-react-app` 脚手架停止维护，开发者需要一个现代化、高效且开箱即用的 React 项目模板。**React-Ts-Template** 应运而生！这是一个基于最新的 **React 19、TypeScript 和 Vite** 打造的项目模板，旨在帮助你极速启动项目，节省大量重复的配置时间。
 
 ## 🌟 为什么选择 React-Ts-Template？
 
-- ⚡ **极速开发体验** - 基于 Vite 7 构建，冷启动和热更新速度极快
-- 🚀 **前沿技术栈** - React 19、TypeScript、Zustand、React-Router v7 等最新技术
+- ⚡ **极速开发体验** - 基于 Vite 构建，冷启动和热更新速度极快
+- 🚀 **前沿技术栈** - React 19、TypeScript、Zustand、React-Router 等最新技术
 - 📦 **开箱即用** - 集成路由、状态管理、请求封装、代码规范等完整解决方案
 - 🛡️ **类型安全** - 完整的 TypeScript 类型定义，保障代码质量
 - 🎨 **现代 CSS** - SCSS 预编译 + BEM 命名规范，样式管理更规范
@@ -71,12 +71,12 @@ pnpm build:pro
 | 类别 | 技术 | 描述 |
 | --- | --- | --- |
 | **核心框架** | React 19 | 最新版 React，更高性能和更流畅的用户体验 |
-| **路由管理** | React-Router v7 | 支持路由懒加载，优化页面切换性能 |
+| **路由管理** | React-Router | 支持路由懒加载，优化页面切换性能 |
 | **状态管理** | Zustand | 轻量级状态管理库，简单易用 |
 | **样式方案** | SCSS + BEM | 模块化样式管理，结构清晰（可自行选择使用css module `xxx.module.scss`） |
 | **HTTP库** | Axios | 统一处理 HTTP 请求和响应 |
 | **工具库** | ahooks + es-toolkit | 丰富的 React Hooks 和 JS 工具函数 |
-| **构建工具** | Vite 7 | 极速的构建工具，提升开发体验 |
+| **构建工具** | Vite | 极速的构建工具，提升开发体验 |
 | **类型检查** | TypeScript | 强大的类型系统，保障代码质量 |
 | **代码规范** | ESLint + Prettier + Stylelint | 统一代码风格，提高代码质量 |
 
@@ -108,7 +108,7 @@ pnpm build:pro
 
 ### 🚀 高性能构建
 
-- 基于 Vite 7 构建，冷启动时间快至毫秒级
+- 基于 Vite 构建，冷启动时间快至毫秒级
 - 支持代码分割和动态导入，优化首屏加载速度
 
 ### 🛡️ 完善的类型系统

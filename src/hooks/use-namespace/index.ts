@@ -34,6 +34,7 @@ const is: {
   return name && state ? `${statePrefix}${name}` : '';
 };
 
+// eslint-disable-next-line @eslint-react/no-unnecessary-use-prefix
 const useNamespace = (block: string) => {
   const namespace = DEFAULT_NAMESPACE;
   const b = (blockSuffix = '') => _bem(namespace, block, blockSuffix, '', '');
