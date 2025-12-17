@@ -1,0 +1,62 @@
+.error-boundary {
+  width: 80%;
+  padding: 20px;
+  margin: 100px auto;
+  background-color: #fff0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+
+  &__title {
+    padding-bottom: 10px;
+    color: #ff6347;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__message {
+    font-weight: bold;
+  }
+
+  &__details {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ff6347;
+    }
+  }
+
+  &__stack {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--retry {
+      background-color: #ff6347;
+    }
+
+    &--back {
+      background-color: #4169e1;
+    }
+
+    &--home {
+      background-color: skyblue;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 import { lazy } from 'react';
 import { Navigate, RouteObject, createBrowserRouter } from 'react-router';
 
-import ErrorBoundary from '../error-boundary';
+import ErrorBoundary from '@/components/error-boundary';
+
 import { LazyLoad, routes } from './utils';
 
 const router: RouteObject[] = [

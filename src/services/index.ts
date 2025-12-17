@@ -2,6 +2,11 @@ import { AxiosRequestConfig } from 'axios';
 
 import axiosInstance from './service';
 
+const catchError = (e: any) => {
+  console.error(e);
+  return e;
+};
+
 /** 根据 axiosInstance 配置看情况修改 */
 export const GET = <T = any, P = Record<string, any>>(
   url: string,
@@ -15,7 +20,7 @@ export const GET = <T = any, P = Record<string, any>>(
     ...config,
   })
     .then((res) => res?.data)
-    .catch((e) => e); // async/await就不需要加try/catch了
+    .catch(catchError); // async/await就不需要加try/catch了
 };
 
 export const POST = <T = any, P = Record<string, any>>(
@@ -30,5 +35,5 @@ export const POST = <T = any, P = Record<string, any>>(
     ...config,
   })
     .then((res) => res?.data)
-    .catch((e) => e); // async/await就不需要加try/catch了
+    .catch(catchError); // async/await就不需要加try/catch了
 };

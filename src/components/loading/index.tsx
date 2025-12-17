@@ -4,6 +4,7 @@ import './index.scss';
 
 let container: HTMLDivElement | null = null;
 let root: Root | null = null;
+let refCount = 0; // 引用计数
 
 /** Loading组件示例，可替换为ui库的loading组件作二次封装 */
 function Loading() {
@@ -34,7 +35,12 @@ function Loading() {
 }
 
 Loading.show = () => {
-  if (container || root) return;
+  refCount++;
+
+  if (container && root) {
+    return; // 已经显示，只增加计数
+  }
+
   container = document.createElement('div');
   container.setAttribute('id', 'pub-loading');
   root = createRoot(container);
@@ -43,6 +49,12 @@ Loading.show = () => {
 };
 
 Loading.hide = () => {
+  refCount = Math.max(0, refCount - 1);
+
+  if (refCount > 0) {
+    return; // 还有其他地方在使用，不关闭
+  }
+
   if (container && root) {
     root.unmount();
     document.body.removeChild(container);
