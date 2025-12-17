@@ -65,7 +65,8 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           // 手动分包，将第三方库拆分到单独的chunk包中（注意这些包名必须存在，否则打包会报错）
           manualChunks: {
             'vendor-react': ['react', 'react-dom', 'react-router'],
-            'vendor-utils': ['axios', 'dayjs', 'immer', 'zustand', 'ahooks', 'clsx', 'es-toolkit'],
+            'vendor-utils': ['axios', 'dayjs', 'clsx', 'es-toolkit'],
+            'vendor-effect': ['immer', 'use-immer', 'zustand', 'ahooks', 'swr'],
             // 'vendor-ui':['antd']
           },
         },

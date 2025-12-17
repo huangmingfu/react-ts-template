@@ -15,7 +15,7 @@ importers:
         specifier: ^1.13.2
         version: 1.13.2
       clsx:
-        specifier: 2.1.1
+        specifier: ^2.1.1
         version: 2.1.1
       dayjs:
         specifier: ^1.11.19
@@ -36,7 +36,7 @@ importers:
         specifier: ^7.10.1
         version: 7.10.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       swr:
-        specifier: 2.3.8
+        specifier: ^2.3.8
         version: 2.3.8(react@19.2.3)
       use-immer:
         specifier: ^0.11.0
