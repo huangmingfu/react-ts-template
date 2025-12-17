@@ -69,7 +69,10 @@ pnpm build:pro
 | **Core Framework** | React 19 | Latest React version for higher performance and smoother user experience |
 | **Routing** | React-Router | Supports route lazy loading, optimizes page transition performance |
 | **State Management** | Zustand | Lightweight state management library, simple and easy to use |
+| **Data Fetching** | SWR | React Hooks library for data fetching with caching, revalidation, and polling features |
+| **Immutable Data** | use-immer | React Hook based on Immer to simplify complex state updates |
 | **Styling** | SCSS + BEM | Modular style management with clear structure (Optional: Use CSS modules xxx.module.scss) |
+| **Class Name Handling** | clsx | Lightweight CSS class name handler, smaller and faster than classnames |
 | **HTTP Client** | Axios | Unified handling of HTTP requests and responses |
 | **Utility Libraries** | ahooks + es-toolkit | Rich React Hooks and JS utility functions |
 | **Build Tool** | Vite | Lightning-fast build tool that enhances development experience |

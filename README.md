@@ -73,7 +73,10 @@ pnpm build:pro
 | **核心框架** | React 19 | 最新版 React，更高性能和更流畅的用户体验 |
 | **路由管理** | React-Router | 支持路由懒加载，优化页面切换性能 |
 | **状态管理** | Zustand | 轻量级状态管理库，简单易用 |
+| **数据获取** | SWR | React Hooks 数据请求库，支持缓存、重新验证、轮询等特性 |
+| **不可变数据** | use-immer | 基于 Immer 的 React Hook，简化复杂状态的更新操作 |
 | **样式方案** | SCSS + BEM | 模块化样式管理，结构清晰（可自行选择使用css module `xxx.module.scss`） |
+| **类名处理** | clsx | 轻量级 CSS 类名处理库，比 classnames 体积更小、性能更好，Antd 6.0 也开始替换使用clsx |
 | **HTTP库** | Axios | 统一处理 HTTP 请求和响应 |
 | **工具库** | ahooks + es-toolkit | 丰富的 React Hooks 和 JS 工具函数 |
 | **构建工具** | Vite | 极速的构建工具，提升开发体验 |

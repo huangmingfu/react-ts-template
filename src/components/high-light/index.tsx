@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import classnames from 'classnames';
+import clsx from 'clsx';
 
 import './index.scss';
 
@@ -23,7 +23,7 @@ function Highlight({
     index % 2 === 0 ? (
       x
     ) : (
-      <mark key={index!} className={classnames('highlight', className)} style={{ color }}>
+      <mark key={index!} className={clsx('highlight', className)} style={{ color }}>
         {x[0] === '@' ? x.slice(1) : x}
       </mark>
     ),
