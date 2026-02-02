@@ -62,7 +62,6 @@ pnpm build:pro
 - **全局状态管理**：提供了 Zustand 全局状态管理示例代码，简化跨组件状态共享，提升开发效率。（详见`store`）
 - **Axios 请求封装**：对 Axios 进行封装，统一处理 HTTP 请求和响应，简化与后端接口的交互流程。（详见[service](./src/services)）
 - **工具函数、hooks**：提供了一些方便实用的工具函数和hooks。（详见[utils](./src/utils)、[hooks](./src/hooks)）
-- **react-dev-inspector集成**：点击页面元素，IDE直接打开对应代码插件，方便开发者调试代码，提高开发效率。(详见[vite.config.ts](./vite.config.ts)）
 - **import顺序自动美化排序**：集成了 prettier-plugin-sort-imports 插件，可以自动美化 import 顺序，提高代码的可读性和可维护性。
 - **其他**：提供一些方便根据环境运行、打包的命令；配置了分包策略；本地反向代理解决跨域；还有详细的`保姆级注释`等等。
 
@@ -125,12 +124,6 @@ pnpm build:pro
 - 集成 ESLint、Prettier、Stylelint 三大代码规范工具
 - 统一的 commit message 规范（Commitlint + Husky）
 - 自动格式化代码，保证团队代码风格一致性
-
-### 🔧 强大的开发工具链
-
-- react-dev-inspector 集成，点击页面元素直接跳转到源码
-- import 顺序自动排序，提高代码可读性
-- 多环境配置（dev/test/pro），满足不同部署需求
 
 ## 📦 关于路由缓存 keep-alive
 

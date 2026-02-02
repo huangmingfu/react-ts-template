@@ -1,5 +1,5 @@
-import { inspectorServer } from '@react-dev-inspector/vite-plugin';
 import react from '@vitejs/plugin-react-swc';
+import { codeInspectorPlugin } from 'code-inspector-plugin';
 import { resolve } from 'node:path';
 import process from 'node:process';
 import { ConfigEnv, UserConfig, defineConfig, loadEnv } from 'vite';
@@ -13,10 +13,15 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
     plugins: [
       react(),
       /**
-       * 点击页面元素，IDE直接打开对应代码插件（本项目配置的快捷键是：ctrl+alt+q，详见main.tsx）
-       * @see https://github.com/zthxxx/react-dev-inspector
+       * 在页面上按住组合键时，鼠标在页面移动即会在 DOM 上出现遮罩层并显示相关信息，点击一下将自动打开 IDE 并将光标定位到元素对应的代码位置
+       * Mac 默认组合键 Option + Shift
+       * Windows 默认组合键 Alt + Shift
+       * 更多用法看 https://inspector.fe-dev.cn/guide/start.html
        */
-      inspectorServer(),
+      codeInspectorPlugin({
+        bundler: 'vite',
+        hideConsole: true,
+      }),
       // 在浏览器中直接看到上报的类型错误（更严格的类型校验）
       checker({
         typescript: true,

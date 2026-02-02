@@ -58,7 +58,6 @@ pnpm build:pro
 - **Global State Management**: Provides Zustand global state management example code, simplifying cross-component state sharing and improving development efficiency. (See [store](./src/store))
 - **Axios Request Encapsulation**: Encapsulated Axios to uniformly handle HTTP requests and responses, simplifying interaction with backend interfaces. (See [services](./src/services))
 - **Utility Functions & Hooks**: Provides some convenient and practical utility functions and hooks. (See [utils](./src/utils), [hooks](./src/hooks))
-- **react-dev-inspector Integration**: Click on page elements to open corresponding code in IDE, facilitating code debugging and improving development efficiency. (See [vite.config.ts](./vite.config.ts))
 - **Automatic Import Order Beautification**: Integrated prettier-plugin-sort-imports plugin to automatically beautify import order, enhancing code readability and maintainability.
 - **Others**: Provides commands for convenient environment-based running and building; configured code splitting strategy; local reverse proxy for CORS; and detailed `nanny-level comments`, etc.
 
@@ -121,12 +120,6 @@ pnpm build:pro
 - Integrated ESLint, Prettier, Stylelint - the three major code standard tools
 - Unified commit message standards (Commitlint + Husky)
 - Automatic code formatting to ensure team code style consistency
-
-### 🔧 Powerful Development Toolchain
-
-- react-dev-inspector integration - click page elements to jump directly to source code
-- Automatic import order sorting for improved code readability
-- Multi-environment configuration (dev/test/pro) to meet different deployment requirements
 
 ## 📦 About Route Caching (keep-alive)
 

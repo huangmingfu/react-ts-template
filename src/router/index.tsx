@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Navigate, RouteObject, createBrowserRouter } from 'react-router';
 
-import ErrorBoundary from '@/components/error-boundary';
+import { ErrorBoundary } from '@/components';
 
 import { LazyLoad, routes } from './utils';
 

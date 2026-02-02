@@ -1,9 +1,11 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
+// import { Loading } from '@/components';
+
 // 创建axios实例
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL, // 请求的默认前缀 只要是发出去请求就会 默认带上这个前缀
-  timeout: 10000, // 请求超时时间：10s
+  timeout: 60000, // 请求超时时间：60s
   headers: { 'Content-Type': 'application/json' }, // 设置默认请求头
 });
 
@@ -15,9 +17,15 @@ axiosInstance.interceptors.request.use(
     // if (token) {
     //     config.headers.Authorization = `Bearer ${token}`
     // }
+
+    // 全局 loading 显示
+    // Loading.show();
+
     return config;
   },
   (err: AxiosError) => {
+    // 全局 loading 隐藏
+    // Loading.hide();
     return Promise.reject(err);
   },
 );
@@ -35,11 +43,19 @@ axiosInstance.interceptors.response.use(
     //   default:
     //     return res.data || {};
     // }
+
+    // 全局 loading 隐藏
+    // Loading.hide();
+
     return res; // res.data
   },
   (err: AxiosError) => {
     // 如果接口请求报错时，也可以直接返回对象，如return { message: onErrorReason(error.message) }，这样使用async/await就不需要加try/catch
     // onErrorReason(err.message) // 做一些全局的错误提示，可用ui库的message提示组件
+
+    // 全局 loading 隐藏
+    // Loading.hide();
+
     return Promise.resolve(err);
   },
 );
